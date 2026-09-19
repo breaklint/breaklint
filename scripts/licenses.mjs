@@ -1,3 +1,4 @@
+import { format } from "prettier";
 import {
   readFileSync,
   readdirSync,
@@ -123,7 +124,13 @@ const out = {
       "Case-fold table comment identifies Unicode 13.0.0 generated through Python; historical generation inputs and license applicability require owner review",
   },
 };
-writeFileSync(join(root, "DEPENDENCIES.json"), JSON.stringify(out, null, 2) + "\n");
+writeFileSync(
+  join(root, "DEPENDENCIES.json"),
+  await format(JSON.stringify(out), {
+    ...json(join(root, ".prettierrc.json")),
+    parser: "json",
+  }),
+);
 let text =
   "# Third-party dependency inventory and notices\n\nGenerated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing and Unicode generation provenance remain owner review gates.\n\n| Package | Version | License | Action bundle | Scope |\n| --- | --- | --- | --- | --- |\n";
 for (const i of items)

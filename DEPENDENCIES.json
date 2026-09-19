@@ -2,31 +2,19 @@
   "schemaVersion": 1,
   "scope": "Resolved public runtime and development graph; Action input closure",
   "direct": [
-    {
-      "owner": "@breaklint/public-protocol",
-      "name": "zod",
-      "version": "4.4.3"
-    },
+    { "owner": "@breaklint/public-protocol", "name": "zod", "version": "4.4.3" },
     {
       "owner": "@breaklint/public-config",
       "name": "@breaklint/public-protocol",
       "version": "workspace:*"
     },
-    {
-      "owner": "@breaklint/public-config",
-      "name": "zod",
-      "version": "4.4.3"
-    },
+    { "owner": "@breaklint/public-config", "name": "zod", "version": "4.4.3" },
     {
       "owner": "@breaklint/hosted-client",
       "name": "@breaklint/public-protocol",
       "version": "workspace:*"
     },
-    {
-      "owner": "@breaklint/hosted-client",
-      "name": "ignore",
-      "version": "7.0.6"
-    },
+    { "owner": "@breaklint/hosted-client", "name": "ignore", "version": "7.0.6" },
     {
       "owner": "breaklint",
       "name": "@breaklint/public-config",
@@ -42,11 +30,7 @@
       "name": "@breaklint/hosted-client",
       "version": "workspace:*"
     },
-    {
-      "owner": "breaklint",
-      "name": "commander",
-      "version": "15.0.0"
-    },
+    { "owner": "breaklint", "name": "commander", "version": "15.0.0" },
     {
       "owner": "@breaklint/github-action",
       "name": "@actions/core",
@@ -78,14 +62,9 @@
       "name": "@actions/core",
       "version": "1.11.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@actions/exec": "^1.1.1",
-        "@actions/http-client": "^2.0.1"
-      },
+      "dependencies": { "@actions/exec": "^1.1.1", "@actions/http-client": "^2.0.1" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -97,13 +76,9 @@
       "name": "@actions/exec",
       "version": "1.1.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@actions/io": "^1.0.1"
-      },
+      "dependencies": { "@actions/io": "^1.0.1" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -115,9 +90,7 @@
       "name": "@actions/github",
       "version": "6.0.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
         "@actions/http-client": "^2.2.0",
@@ -139,14 +112,9 @@
       "name": "@actions/http-client",
       "version": "2.2.3",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "tunnel": "^0.0.6",
-        "undici": "^5.25.4"
-      },
+      "dependencies": { "tunnel": "^0.0.6", "undici": "^5.25.4" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -158,9 +126,7 @@
       "name": "@actions/io",
       "version": "1.1.3",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -174,13 +140,9 @@
       "name": "@eslint-community/eslint-utils",
       "version": "4.10.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "eslint-visitor-keys": "^3.4.3"
-      },
+      "dependencies": { "eslint-visitor-keys": "^3.4.3" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -192,9 +154,7 @@
       "name": "@eslint-community/regexpp",
       "version": "4.12.2",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -208,9 +168,7 @@
       "name": "@eslint/config-array",
       "version": "0.23.5",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@eslint/object-schema": "^3.0.5",
@@ -228,13 +186,9 @@
       "name": "@eslint/config-helpers",
       "version": "0.7.0",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "@eslint/core": "^1.2.1"
-      },
+      "dependencies": { "@eslint/core": "^1.2.1" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -246,13 +200,9 @@
       "name": "@eslint/core",
       "version": "1.2.1",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "@types/json-schema": "^7.0.15"
-      },
+      "dependencies": { "@types/json-schema": "^7.0.15" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -264,9 +214,7 @@
       "name": "@eslint/js",
       "version": "10.0.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -280,9 +228,7 @@
       "name": "@eslint/object-schema",
       "version": "3.0.5",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -296,14 +242,9 @@
       "name": "@eslint/plugin-kit",
       "version": "0.7.3",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "@eslint/core": "^1.2.1",
-        "levn": "^0.4.1"
-      },
+      "dependencies": { "@eslint/core": "^1.2.1", "levn": "^0.4.1" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -315,9 +256,7 @@
       "name": "@fastify/busboy",
       "version": "2.1.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -331,13 +270,9 @@
       "name": "@humanfs/core",
       "version": "0.19.2",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "@humanfs/types": "^0.15.0"
-      },
+      "dependencies": { "@humanfs/types": "^0.15.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -349,9 +284,7 @@
       "name": "@humanfs/node",
       "version": "0.16.8",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@humanwhocodes/retry": "^0.4.0",
@@ -369,9 +302,7 @@
       "name": "@humanfs/types",
       "version": "0.15.0",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": []
@@ -380,9 +311,7 @@
       "name": "@humanwhocodes/module-importer",
       "version": "1.0.1",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -396,9 +325,7 @@
       "name": "@humanwhocodes/retry",
       "version": "0.4.3",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -412,9 +339,7 @@
       "name": "@octokit/auth-token",
       "version": "4.0.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -428,9 +353,7 @@
       "name": "@octokit/core",
       "version": "5.2.2",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
         "@octokit/auth-token": "^4.0.0",
@@ -452,14 +375,9 @@
       "name": "@octokit/endpoint",
       "version": "9.0.6",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@octokit/types": "^13.1.0",
-        "universal-user-agent": "^6.0.0"
-      },
+      "dependencies": { "@octokit/types": "^13.1.0", "universal-user-agent": "^6.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -471,9 +389,7 @@
       "name": "@octokit/graphql",
       "version": "7.1.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
         "@octokit/request": "^8.4.1",
@@ -491,9 +407,7 @@
       "name": "@octokit/openapi-types",
       "version": "20.0.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -507,9 +421,7 @@
       "name": "@octokit/openapi-types",
       "version": "24.2.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -523,13 +435,9 @@
       "name": "@octokit/plugin-paginate-rest",
       "version": "9.2.2",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@octokit/types": "^12.6.0"
-      },
+      "dependencies": { "@octokit/types": "^12.6.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -541,13 +449,9 @@
       "name": "@octokit/plugin-rest-endpoint-methods",
       "version": "10.4.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@octokit/types": "^12.6.0"
-      },
+      "dependencies": { "@octokit/types": "^12.6.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -559,9 +463,7 @@
       "name": "@octokit/request",
       "version": "8.4.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
         "@octokit/endpoint": "^9.0.6",
@@ -580,9 +482,7 @@
       "name": "@octokit/request-error",
       "version": "5.1.1",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
         "@octokit/types": "^13.1.0",
@@ -600,13 +500,9 @@
       "name": "@octokit/types",
       "version": "12.6.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": false,
-      "dependencies": {
-        "@octokit/openapi-types": "^20.0.0"
-      },
+      "dependencies": { "@octokit/openapi-types": "^20.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -618,13 +514,9 @@
       "name": "@octokit/types",
       "version": "13.10.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": false,
-      "dependencies": {
-        "@octokit/openapi-types": "^24.2.0"
-      },
+      "dependencies": { "@octokit/openapi-types": "^24.2.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -636,9 +528,7 @@
       "name": "@types/esrecurse",
       "version": "4.3.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -652,9 +542,7 @@
       "name": "@types/estree",
       "version": "1.0.9",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -668,9 +556,7 @@
       "name": "@types/json-schema",
       "version": "7.0.15",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -684,13 +570,9 @@
       "name": "@types/node",
       "version": "22.20.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "undici-types": "~6.21.0"
-      },
+      "dependencies": { "undici-types": "~6.21.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -702,9 +584,7 @@
       "name": "@typescript-eslint/eslint-plugin",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@eslint-community/regexpp": "^4.12.2",
@@ -727,9 +607,7 @@
       "name": "@typescript-eslint/parser",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "debug": "^4.4.3",
@@ -749,9 +627,7 @@
       "name": "@typescript-eslint/project-service",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "debug": "^4.4.3",
@@ -769,9 +645,7 @@
       "name": "@typescript-eslint/scope-manager",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@typescript-eslint/visitor-keys": "8.66.0",
@@ -788,9 +662,7 @@
       "name": "@typescript-eslint/tsconfig-utils",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -804,9 +676,7 @@
       "name": "@typescript-eslint/type-utils",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "debug": "^4.4.3",
@@ -826,9 +696,7 @@
       "name": "@typescript-eslint/types",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -842,9 +710,7 @@
       "name": "@typescript-eslint/typescript-estree",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "debug": "^4.4.3",
@@ -868,9 +734,7 @@
       "name": "@typescript-eslint/utils",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@eslint-community/eslint-utils": "^4.9.1",
@@ -889,9 +753,7 @@
       "name": "@typescript-eslint/visitor-keys",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "eslint-visitor-keys": "^5.0.0",
@@ -908,9 +770,7 @@
       "name": "acorn",
       "version": "8.18.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -924,9 +784,7 @@
       "name": "acorn-jsx",
       "version": "5.3.2",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -940,9 +798,7 @@
       "name": "ajv",
       "version": "6.15.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "fast-deep-equal": "^3.1.1",
@@ -961,9 +817,7 @@
       "name": "balanced-match",
       "version": "4.0.4",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -977,9 +831,7 @@
       "name": "before-after-hook",
       "version": "2.2.3",
       "license": "Apache-2.0",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -993,13 +845,9 @@
       "name": "brace-expansion",
       "version": "5.0.12",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "balanced-match": "^4.0.2"
-      },
+      "dependencies": { "balanced-match": "^4.0.2" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1011,9 +859,7 @@
       "name": "commander",
       "version": "15.0.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1027,9 +873,7 @@
       "name": "cross-spawn",
       "version": "7.0.6",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "path-key": "^3.1.0",
@@ -1047,13 +891,9 @@
       "name": "debug",
       "version": "4.4.3",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "ms": "^2.1.3"
-      },
+      "dependencies": { "ms": "^2.1.3" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1065,9 +905,7 @@
       "name": "deep-is",
       "version": "0.1.4",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1081,9 +919,7 @@
       "name": "deprecation",
       "version": "2.3.1",
       "license": "ISC",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -1097,9 +933,7 @@
       "name": "esbuild",
       "version": "0.27.2",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1113,9 +947,7 @@
       "name": "escape-string-regexp",
       "version": "4.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1129,9 +961,7 @@
       "name": "eslint",
       "version": "10.8.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@eslint-community/eslint-utils": "^4.8.0",
@@ -1176,9 +1006,7 @@
       "name": "eslint-scope",
       "version": "9.1.2",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@types/esrecurse": "^4.3.1",
@@ -1197,9 +1025,7 @@
       "name": "eslint-visitor-keys",
       "version": "3.4.3",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1213,9 +1039,7 @@
       "name": "eslint-visitor-keys",
       "version": "5.0.1",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1229,9 +1053,7 @@
       "name": "espree",
       "version": "11.2.0",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "acorn": "^8.16.0",
@@ -1249,13 +1071,9 @@
       "name": "esquery",
       "version": "1.7.0",
       "license": "BSD-3-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "estraverse": "^5.1.0"
-      },
+      "dependencies": { "estraverse": "^5.1.0" },
       "noticeFiles": [
         {
           "name": "license.txt",
@@ -1267,22 +1085,16 @@
       "name": "esrecurse",
       "version": "4.3.0",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "estraverse": "^5.2.0"
-      },
+      "dependencies": { "estraverse": "^5.2.0" },
       "noticeFiles": []
     },
     {
       "name": "estraverse",
       "version": "5.3.0",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1296,9 +1108,7 @@
       "name": "esutils",
       "version": "2.0.3",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1312,9 +1122,7 @@
       "name": "fast-deep-equal",
       "version": "3.1.3",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1328,9 +1136,7 @@
       "name": "fast-json-stable-stringify",
       "version": "2.1.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1344,9 +1150,7 @@
       "name": "fast-levenshtein",
       "version": "2.0.6",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1360,9 +1164,7 @@
       "name": "fdir",
       "version": "6.5.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1376,13 +1178,9 @@
       "name": "file-entry-cache",
       "version": "8.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "flat-cache": "^4.0.0"
-      },
+      "dependencies": { "flat-cache": "^4.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1394,14 +1192,9 @@
       "name": "find-up",
       "version": "5.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "locate-path": "^6.0.0",
-        "path-exists": "^4.0.0"
-      },
+      "dependencies": { "locate-path": "^6.0.0", "path-exists": "^4.0.0" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1413,14 +1206,9 @@
       "name": "flat-cache",
       "version": "4.0.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "flatted": "^3.2.9",
-        "keyv": "^4.5.4"
-      },
+      "dependencies": { "flatted": "^3.2.9", "keyv": "^4.5.4" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1432,9 +1220,7 @@
       "name": "flatted",
       "version": "3.4.4",
       "license": "ISC",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1448,13 +1234,9 @@
       "name": "glob-parent",
       "version": "6.0.2",
       "license": "ISC",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "is-glob": "^4.0.3"
-      },
+      "dependencies": { "is-glob": "^4.0.3" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1466,9 +1248,7 @@
       "name": "ignore",
       "version": "5.3.2",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1482,10 +1262,7 @@
       "name": "ignore",
       "version": "7.0.6",
       "license": "MIT",
-      "scopes": [
-        "development",
-        "runtime"
-      ],
+      "scopes": ["development", "runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -1499,9 +1276,7 @@
       "name": "imurmurhash",
       "version": "0.1.4",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": []
@@ -1510,9 +1285,7 @@
       "name": "is-extglob",
       "version": "2.1.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1526,13 +1299,9 @@
       "name": "is-glob",
       "version": "4.0.3",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "is-extglob": "^2.1.1"
-      },
+      "dependencies": { "is-extglob": "^2.1.1" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1544,9 +1313,7 @@
       "name": "isexe",
       "version": "2.0.0",
       "license": "ISC",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1560,9 +1327,7 @@
       "name": "json-buffer",
       "version": "3.0.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1576,9 +1341,7 @@
       "name": "json-schema-traverse",
       "version": "0.4.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1592,9 +1355,7 @@
       "name": "json-stable-stringify-without-jsonify",
       "version": "1.0.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1608,27 +1369,18 @@
       "name": "keyv",
       "version": "4.5.4",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "json-buffer": "3.0.1"
-      },
+      "dependencies": { "json-buffer": "3.0.1" },
       "noticeFiles": []
     },
     {
       "name": "levn",
       "version": "0.4.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "prelude-ls": "^1.2.1",
-        "type-check": "~0.4.0"
-      },
+      "dependencies": { "prelude-ls": "^1.2.1", "type-check": "~0.4.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1640,13 +1392,9 @@
       "name": "locate-path",
       "version": "6.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "p-locate": "^5.0.0"
-      },
+      "dependencies": { "p-locate": "^5.0.0" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1658,13 +1406,9 @@
       "name": "minimatch",
       "version": "10.2.6",
       "license": "BlueOak-1.0.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "brace-expansion": "^5.0.8"
-      },
+      "dependencies": { "brace-expansion": "^5.0.8" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -1676,9 +1420,7 @@
       "name": "ms",
       "version": "2.1.3",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1692,9 +1434,7 @@
       "name": "natural-compare",
       "version": "1.4.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": []
@@ -1703,13 +1443,9 @@
       "name": "once",
       "version": "1.4.0",
       "license": "ISC",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "wrappy": "1"
-      },
+      "dependencies": { "wrappy": "1" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1721,9 +1457,7 @@
       "name": "optionator",
       "version": "0.9.4",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "prelude-ls": "^1.2.1",
@@ -1744,13 +1478,9 @@
       "name": "p-limit",
       "version": "3.1.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "yocto-queue": "^0.1.0"
-      },
+      "dependencies": { "yocto-queue": "^0.1.0" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1762,13 +1492,9 @@
       "name": "p-locate",
       "version": "5.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "p-limit": "^3.0.2"
-      },
+      "dependencies": { "p-limit": "^3.0.2" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1780,9 +1506,7 @@
       "name": "path-exists",
       "version": "4.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1796,9 +1520,7 @@
       "name": "path-key",
       "version": "3.1.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1812,9 +1534,7 @@
       "name": "picomatch",
       "version": "4.0.7",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1828,9 +1548,7 @@
       "name": "prelude-ls",
       "version": "1.2.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1844,9 +1562,7 @@
       "name": "prettier",
       "version": "3.9.6",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1860,9 +1576,7 @@
       "name": "punycode",
       "version": "2.3.1",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1876,9 +1590,7 @@
       "name": "semver",
       "version": "7.8.5",
       "license": "ISC",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1892,13 +1604,9 @@
       "name": "shebang-command",
       "version": "2.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "shebang-regex": "^3.0.0"
-      },
+      "dependencies": { "shebang-regex": "^3.0.0" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1910,9 +1618,7 @@
       "name": "shebang-regex",
       "version": "3.0.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1926,14 +1632,9 @@
       "name": "tinyglobby",
       "version": "0.2.17",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "fdir": "^6.5.0",
-        "picomatch": "^4.0.4"
-      },
+      "dependencies": { "fdir": "^6.5.0", "picomatch": "^4.0.4" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1945,9 +1646,7 @@
       "name": "ts-api-utils",
       "version": "2.5.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -1961,9 +1660,7 @@
       "name": "tunnel",
       "version": "0.0.6",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -1977,13 +1674,9 @@
       "name": "type-check",
       "version": "0.4.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "prelude-ls": "^1.2.1"
-      },
+      "dependencies": { "prelude-ls": "^1.2.1" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1995,9 +1688,7 @@
       "name": "typescript",
       "version": "5.9.3",
       "license": "Apache-2.0",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -2011,9 +1702,7 @@
       "name": "typescript-eslint",
       "version": "8.66.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {
         "@typescript-eslint/eslint-plugin": "8.66.0",
@@ -2032,13 +1721,9 @@
       "name": "undici",
       "version": "5.29.0",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@fastify/busboy": "^2.0.0"
-      },
+      "dependencies": { "@fastify/busboy": "^2.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -2050,9 +1735,7 @@
       "name": "undici-types",
       "version": "6.21.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -2066,9 +1749,7 @@
       "name": "universal-user-agent",
       "version": "6.0.1",
       "license": "ISC",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -2082,13 +1763,9 @@
       "name": "uri-js",
       "version": "4.4.1",
       "license": "BSD-2-Clause",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "punycode": "^2.1.0"
-      },
+      "dependencies": { "punycode": "^2.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -2100,13 +1777,9 @@
       "name": "which",
       "version": "2.0.2",
       "license": "ISC",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
-      "dependencies": {
-        "isexe": "^2.0.0"
-      },
+      "dependencies": { "isexe": "^2.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -2118,9 +1791,7 @@
       "name": "word-wrap",
       "version": "1.2.5",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -2134,9 +1805,7 @@
       "name": "wrappy",
       "version": "1.0.2",
       "license": "ISC",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
@@ -2150,9 +1819,7 @@
       "name": "yocto-queue",
       "version": "0.1.0",
       "license": "MIT",
-      "scopes": [
-        "development"
-      ],
+      "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
       "noticeFiles": [
@@ -2166,9 +1833,7 @@
       "name": "zod",
       "version": "4.4.3",
       "license": "MIT",
-      "scopes": [
-        "runtime"
-      ],
+      "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "noticeFiles": [
