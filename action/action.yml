@@ -1,0 +1,37 @@
+name: Breaklint Source Review
+description: Review exact PR source revisions with the hosted Breaklint service.
+author: Breaklint
+branding:
+  icon: check-circle
+  color: purple
+inputs:
+  service-url:
+    description: Trusted HTTPS service endpoint, without credentials or query parameters.
+    required: true
+  service-token:
+    description: Dedicated service credential from trusted workflow secrets; never a GitHub token.
+    required: false
+  github-token:
+    description: GitHub Actions token for provider context and publication, separate from service authentication.
+    required: true
+    default: ${{ github.token }}
+  working-directory:
+    description: Git object store containing exact Base and raw Head. No project code is executed.
+    required: false
+    default: .
+  inline:
+    description: Publish service-approved raw-Head locations in the current PR diff.
+    required: false
+    default: "false"
+outputs:
+  status:
+    description: complete, limited, unsupported, indeterminate, unavailable, failed, or cancelled.
+  conclusion:
+    description: Original source conclusion — pass, fail, or inconclusive.
+  delivery:
+    description: published, superseded, failed, or unavailable; separate from source truth.
+  run-id:
+    description: Hosted analysis run identity.
+runs:
+  using: node24
+  main: dist/index.js

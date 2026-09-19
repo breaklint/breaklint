@@ -1,0 +1,9 @@
+node_modules/
+packages/*/dist/
+packages/*/dist-bundle/
+action/dist/
+.release/
+pnpm-lock.yaml
+THIRD_PARTY_NOTICES.md
+**/THIRD_PARTY_NOTICES.md
+**/Unicode-License.txt

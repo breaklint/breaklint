@@ -1,0 +1,42 @@
+{
+  "name": "@breaklint/public-protocol",
+  "version": "0.1.0-rc.0",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "Unicode-License.txt"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./internal": {
+      "types": "./dist/internal.d.ts",
+      "default": "./dist/internal.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "22.20.1"
+  },
+  "description": "Bounded public request and result types for Breaklint hosted source review.",
+  "engines": {
+    "node": "22.14.0 || 24.21.0"
+  },
+  "license": "UNLICENSED",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

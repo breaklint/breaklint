@@ -1,0 +1,33 @@
+{
+  "name": "breaklint-public-workspace",
+  "version": "0.1.0-rc.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": "22.14.0 || 24.21.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "node scripts/build.mjs --check",
+    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test packages/*/test/*.test.mjs",
+    "action:bundle": "node scripts/bundle-action.mjs",
+    "test:action-bundle": "node scripts/verify-action-bundle.mjs",
+    "test:consumer": "node scripts/verify-consumer.mjs",
+    "inventory": "node scripts/licenses.mjs",
+    "scan": "node scripts/scan-release.mjs",
+    "verify": "pnpm build && pnpm typecheck && pnpm lint && pnpm format:check && pnpm test && pnpm test:consumer && pnpm test:action-bundle && pnpm inventory && pnpm scan"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "22.20.1",
+    "eslint": "10.8.0",
+    "@eslint/js": "10.0.1",
+    "typescript-eslint": "8.66.0",
+    "prettier": "3.9.6",
+    "esbuild": "0.27.2"
+  }
+}

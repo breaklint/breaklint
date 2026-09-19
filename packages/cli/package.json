@@ -1,0 +1,42 @@
+{
+  "name": "breaklint",
+  "version": "0.1.0-rc.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@breaklint/public-config": "workspace:*",
+    "@breaklint/public-protocol": "workspace:*",
+    "@breaklint/hosted-client": "workspace:*",
+    "commander": "15.0.0"
+  },
+  "description": "Review committed source revisions with the hosted Breaklint service.",
+  "license": "MIT",
+  "bin": {
+    "breaklint": "./bin/breaklint.js"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "README.md",
+    "bin/breaklint.js",
+    "THIRD_PARTY_NOTICES.md",
+    "Unicode-License.txt"
+  ],
+  "engines": {
+    "node": "22.14.0 || 24.21.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "scope": {
+    "kind": "repository",
+    "selectionProfile": "authored-source-1"
+  },
+  "transferExclusions": [],
+  "rules": [],
+  "gate": {
+    "changes": "introduced-or-worsened",
+    "minimumSeverity": "warning"
+  }
+}
