@@ -64,6 +64,8 @@ function visit(dir, scope) {
     scopes: new Set([scope]),
     bundledInAction: bundled.has(dir),
     dependencies: m.dependencies ?? {},
+    optionalDependencies: m.optionalDependencies ?? {},
+    engines: m.engines ?? {},
     noticeFiles: notices.map((n) => ({
       name: n,
       sha256: createHash("sha256")
@@ -76,6 +78,15 @@ function visit(dir, scope) {
   const req = createRequire(join(dir, "package.json"));
   for (const dep of Object.keys(m.dependencies ?? {})) {
     const entry = resolvePackage(req, dep);
+    visit(packageRoot(entry, dep), scope);
+  }
+  for (const dep of Object.keys(m.optionalDependencies ?? {})) {
+    let entry;
+    try {
+      entry = resolvePackage(req, dep);
+    } catch {
+      continue;
+    }
     visit(packageRoot(entry, dep), scope);
   }
 }

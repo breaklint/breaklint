@@ -65,6 +65,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@actions/exec": "^1.1.1", "@actions/http-client": "^2.0.1" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -79,6 +81,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@actions/io": "^1.0.1" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -101,6 +105,8 @@
         "@octokit/request-error": "^5.1.1",
         "undici": "^5.28.5"
       },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -115,6 +121,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "tunnel": "^0.0.6", "undici": "^5.25.4" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -129,6 +137,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -137,12 +147,25 @@
       ]
     },
     {
+      "name": "@esbuild/darwin-arm64",
+      "version": "0.27.2",
+      "license": "MIT",
+      "scopes": ["development"],
+      "bundledInAction": false,
+      "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=18" },
+      "noticeFiles": []
+    },
+    {
       "name": "@eslint-community/eslint-utils",
       "version": "4.10.1",
       "license": "MIT",
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "eslint-visitor-keys": "^3.4.3" },
+      "optionalDependencies": {},
+      "engines": { "node": "^12.22.0 || ^14.17.0 || >=16.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -157,6 +180,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^12.0.0 || ^14.0.0 || >=16.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -175,6 +200,8 @@
         "debug": "^4.3.1",
         "minimatch": "^10.2.4"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -189,6 +216,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "@eslint/core": "^1.2.1" },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -203,6 +232,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "@types/json-schema": "^7.0.15" },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -217,6 +248,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -231,6 +264,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -245,6 +280,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "@eslint/core": "^1.2.1", "levn": "^0.4.1" },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -259,6 +296,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=14" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -273,6 +312,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "@humanfs/types": "^0.15.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=18.18.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -291,6 +332,8 @@
         "@humanfs/core": "^0.19.2",
         "@humanfs/types": "^0.15.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">=18.18.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -305,6 +348,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=18.18.0" },
       "noticeFiles": []
     },
     {
@@ -314,6 +359,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=12.22" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -328,6 +375,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=18.18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -342,6 +391,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -364,6 +415,8 @@
         "before-after-hook": "^2.2.0",
         "universal-user-agent": "^6.0.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -378,6 +431,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@octokit/types": "^13.1.0", "universal-user-agent": "^6.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -396,6 +451,8 @@
         "@octokit/types": "^13.0.0",
         "universal-user-agent": "^6.0.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -410,6 +467,8 @@
       "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -424,6 +483,8 @@
       "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -438,6 +499,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@octokit/types": "^12.6.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -452,6 +515,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@octokit/types": "^12.6.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -471,6 +536,8 @@
         "@octokit/types": "^13.1.0",
         "universal-user-agent": "^6.0.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -489,6 +556,8 @@
         "deprecation": "^2.0.0",
         "once": "^1.4.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 18" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -503,6 +572,8 @@
       "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": { "@octokit/openapi-types": "^20.0.0" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -517,6 +588,8 @@
       "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": { "@octokit/openapi-types": "^24.2.0" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -531,6 +604,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -545,6 +620,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -559,6 +636,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -573,6 +652,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "undici-types": "~6.21.0" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -596,6 +677,8 @@
         "@typescript-eslint/utils": "8.66.0",
         "@typescript-eslint/visitor-keys": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -616,6 +699,8 @@
         "@typescript-eslint/typescript-estree": "8.66.0",
         "@typescript-eslint/visitor-keys": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -634,6 +719,8 @@
         "@typescript-eslint/tsconfig-utils": "^8.66.0",
         "@typescript-eslint/types": "^8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -651,6 +738,8 @@
         "@typescript-eslint/visitor-keys": "8.66.0",
         "@typescript-eslint/types": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -665,6 +754,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -685,6 +776,8 @@
         "@typescript-eslint/typescript-estree": "8.66.0",
         "@typescript-eslint/utils": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -699,6 +792,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -723,6 +818,8 @@
         "@typescript-eslint/visitor-keys": "8.66.0",
         "@typescript-eslint/tsconfig-utils": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -742,6 +839,8 @@
         "@typescript-eslint/types": "8.66.0",
         "@typescript-eslint/typescript-estree": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -759,6 +858,8 @@
         "eslint-visitor-keys": "^5.0.0",
         "@typescript-eslint/types": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -773,6 +874,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.4.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -787,6 +890,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -806,6 +911,8 @@
         "json-schema-traverse": "^0.4.1",
         "uri-js": "^4.2.2"
       },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -820,6 +927,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "18 || 20 || >=22" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -834,6 +943,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -848,6 +959,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "balanced-match": "^4.0.2" },
+      "optionalDependencies": {},
+      "engines": { "node": "20 || >=22" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -862,6 +975,8 @@
       "scopes": ["runtime"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=22.12.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -880,6 +995,8 @@
         "shebang-command": "^2.0.0",
         "which": "^2.0.1"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 8" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -894,6 +1011,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "ms": "^2.1.3" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=6.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -908,6 +1027,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -922,6 +1043,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -936,6 +1059,35 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {
+        "@esbuild/aix-ppc64": "0.27.2",
+        "@esbuild/android-arm": "0.27.2",
+        "@esbuild/android-arm64": "0.27.2",
+        "@esbuild/android-x64": "0.27.2",
+        "@esbuild/darwin-arm64": "0.27.2",
+        "@esbuild/darwin-x64": "0.27.2",
+        "@esbuild/freebsd-arm64": "0.27.2",
+        "@esbuild/freebsd-x64": "0.27.2",
+        "@esbuild/linux-arm": "0.27.2",
+        "@esbuild/linux-arm64": "0.27.2",
+        "@esbuild/linux-ia32": "0.27.2",
+        "@esbuild/linux-loong64": "0.27.2",
+        "@esbuild/linux-mips64el": "0.27.2",
+        "@esbuild/linux-ppc64": "0.27.2",
+        "@esbuild/linux-riscv64": "0.27.2",
+        "@esbuild/linux-s390x": "0.27.2",
+        "@esbuild/linux-x64": "0.27.2",
+        "@esbuild/netbsd-arm64": "0.27.2",
+        "@esbuild/netbsd-x64": "0.27.2",
+        "@esbuild/openbsd-arm64": "0.27.2",
+        "@esbuild/openbsd-x64": "0.27.2",
+        "@esbuild/openharmony-arm64": "0.27.2",
+        "@esbuild/sunos-x64": "0.27.2",
+        "@esbuild/win32-arm64": "0.27.2",
+        "@esbuild/win32-ia32": "0.27.2",
+        "@esbuild/win32-x64": "0.27.2"
+      },
+      "engines": { "node": ">=18" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -950,6 +1102,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -995,6 +1149,8 @@
         "natural-compare": "^1.4.0",
         "optionator": "^0.9.3"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1014,6 +1170,8 @@
         "esrecurse": "^4.3.0",
         "estraverse": "^5.2.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1028,6 +1186,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^12.22.0 || ^14.17.0 || >=16.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1042,6 +1202,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1060,6 +1222,8 @@
         "acorn-jsx": "^5.3.2",
         "eslint-visitor-keys": "^5.0.1"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^20.19.0 || ^22.13.0 || >=24" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1074,6 +1238,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "estraverse": "^5.1.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.10" },
       "noticeFiles": [
         {
           "name": "license.txt",
@@ -1088,6 +1254,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "estraverse": "^5.2.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=4.0" },
       "noticeFiles": []
     },
     {
@@ -1097,6 +1265,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=4.0" },
       "noticeFiles": [
         {
           "name": "LICENSE.BSD",
@@ -1111,6 +1281,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.10.0" },
       "noticeFiles": [
         {
           "name": "LICENSE.BSD",
@@ -1125,6 +1297,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1139,6 +1313,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1153,6 +1329,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -1167,6 +1345,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=12.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1181,6 +1361,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "flat-cache": "^4.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=16.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1195,6 +1377,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "locate-path": "^6.0.0", "path-exists": "^4.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1209,6 +1393,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "flatted": "^3.2.9", "keyv": "^4.5.4" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=16" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1223,6 +1409,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1237,6 +1425,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "is-glob": "^4.0.3" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=10.13.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1251,6 +1441,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">= 4" },
       "noticeFiles": [
         {
           "name": "LICENSE-MIT",
@@ -1265,6 +1457,8 @@
       "scopes": ["development", "runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">= 4" },
       "noticeFiles": [
         {
           "name": "LICENSE-MIT",
@@ -1279,6 +1473,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.8.19" },
       "noticeFiles": []
     },
     {
@@ -1288,6 +1484,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.10.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1302,6 +1500,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "is-extglob": "^2.1.1" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.10.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1316,6 +1516,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1330,6 +1532,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1344,6 +1548,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1358,6 +1564,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1372,6 +1580,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "json-buffer": "3.0.1" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": []
     },
     {
@@ -1381,6 +1591,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "prelude-ls": "^1.2.1", "type-check": "~0.4.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 0.8.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1395,6 +1607,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "p-locate": "^5.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1409,6 +1623,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "brace-expansion": "^5.0.8" },
+      "optionalDependencies": {},
+      "engines": { "node": "18 || 20 || >=22" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -1423,6 +1639,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "license.md",
@@ -1437,6 +1655,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": []
     },
     {
@@ -1446,6 +1666,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "wrappy": "1" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1467,6 +1689,8 @@
         "levn": "^0.4.1",
         "fast-levenshtein": "^2.0.6"
       },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 0.8.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1481,6 +1705,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "yocto-queue": "^0.1.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1495,6 +1721,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "p-limit": "^3.0.2" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1509,6 +1737,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=8" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1523,6 +1753,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=8" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1537,6 +1769,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=12" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1551,6 +1785,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">= 0.8.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1565,6 +1801,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=14" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1579,6 +1817,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=6" },
       "noticeFiles": [
         {
           "name": "LICENSE-MIT.txt",
@@ -1593,6 +1833,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1607,6 +1849,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "shebang-regex": "^3.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=8" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1621,6 +1865,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=8" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1635,6 +1881,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "fdir": "^6.5.0", "picomatch": "^4.0.4" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=12.0.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1649,6 +1897,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=18.12" },
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -1663,6 +1913,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.6.11 <=0.7.0 || >=0.7.3" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1677,6 +1929,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "prelude-ls": "^1.2.1" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 0.8.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1691,6 +1945,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=14.17" },
       "noticeFiles": [
         {
           "name": "LICENSE.txt",
@@ -1710,6 +1966,8 @@
         "@typescript-eslint/typescript-estree": "8.66.0",
         "@typescript-eslint/utils": "8.66.0"
       },
+      "optionalDependencies": {},
+      "engines": { "node": "^18.18.0 || ^20.9.0 || >=21.1.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1724,6 +1982,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": { "@fastify/busboy": "^2.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">=14.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1738,6 +1998,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1752,6 +2014,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE.md",
@@ -1766,6 +2030,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "punycode": "^2.1.0" },
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1780,6 +2046,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": { "isexe": "^2.0.0" },
+      "optionalDependencies": {},
+      "engines": { "node": ">= 8" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1794,6 +2062,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=0.10.0" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1808,6 +2078,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1822,6 +2094,8 @@
       "scopes": ["development"],
       "bundledInAction": false,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=10" },
       "noticeFiles": [
         {
           "name": "license",
@@ -1836,6 +2110,8 @@
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -1845,6 +2121,7 @@
     }
   ],
   "unknownOrMissingNotices": [
+    "@esbuild/darwin-arm64@0.27.2",
     "@humanfs/types@0.15.0",
     "esrecurse@4.3.0",
     "imurmurhash@0.1.4",
