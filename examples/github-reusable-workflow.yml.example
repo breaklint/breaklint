@@ -29,7 +29,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
           persist-credentials: false
-      - uses: RELEASE_PUBLIC_OWNER/RELEASE_PUBLIC_REPOSITORY/action@RELEASE_FULL_COMMIT
+      - uses: breaklint/breaklint/action@RELEASE_FULL_COMMIT
         with:
           service-url: https://SERVICE_NOT_PROVISIONED.invalid
           oidc-audience: RELEASE_OPERATOR_REGISTERED_AUDIENCE

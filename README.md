@@ -7,7 +7,7 @@ engine is proprietary and is not included in this repository. Results include
 explicit coverage and uncertainty.
 
 Source is the primary truth. No browser, preview URL, application deployment,
-or application login is needed. Public v1 does not include runtime verification,
+application login, or customer runtime environment is needed. Public v1 does not include runtime verification,
 AI explanations, repairs, or an offline analysis engine.
 
 ## Public v1 support
@@ -27,48 +27,71 @@ indeterminate input remains inconclusive; proven blocking findings may still fai
 a limited review. Runtime visual testing, AI review and automatic repair are
 outside public v1.
 
-**Local prerelease candidate. Nothing here asserts npm or GitHub availability.**
-Public launch is blocked on owner licensing, release coordinates, service access,
-and published privacy terms. Package publication is disabled.
+## Use the CLI
 
-## Try the local CLI
-
-Use Git, Node 22.14.0 or 24.21.0 (the exact tested versions in package.json),
-and pnpm 11.9.0:
+The CLI package is `@breaklint/cli`; the executable is `breaklint`. After publication
+of 0.1.0, use:
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm build
-node packages/cli/bin/breaklint.js --help
+npm install --global @breaklint/cli@0.1.0
+breaklint --help
+npx --package=@breaklint/cli@0.1.0 breaklint --version
 ```
 
-With a provider-approved service endpoint and a dedicated credential in
-`BREAKLINT_TOKEN`, review exact committed revisions:
+These registry examples describe post-publication usage, not current availability.
+The intended npm family is `@breaklint/public-protocol`, `@breaklint/public-config`,
+`@breaklint/hosted-client` and `@breaklint/cli`. The Action workspace package remains
+private and is distributed from `breaklint/breaklint/action`, pinned to a verified
+full commit SHA. See the [Action guide](docs/github-action.md).
+
+Use Git and Node 22.14.0 or 24.21.0 (the exact tested versions). With a
+provider-approved service endpoint and a dedicated credential in `BREAKLINT_TOKEN`:
 
 ```sh
-node packages/cli/bin/breaklint.js --base BASE_COMMIT --head HEAD_COMMIT \
+breaklint --base BASE_COMMIT --head HEAD_COMMIT \
   --repository REGISTERED_REPOSITORY_ID \
   --service https://SERVICE_NOT_PROVISIONED.invalid --config examples/breaklint.policy.json
 ```
 
 Uppercase values and the `.invalid` host are deliberate nonworking placeholders.
-The service must authorize the repository and policy. The command transfers source;
-it is not a dry run. Uncommitted files are outside the comparison.
+Service enrollment and authorization for the repository and policy are required;
+installing a package does not grant access. The command transfers source and is not
+a dry run. Uncommitted files are outside the comparison.
+
+The public flow is:
+
+```text
+Public CLI / GitHub Action
+  → bounded immutable source/revision package
+  → authenticated hosted Breaklint service
+  → sanitized result / GitHub Check
+```
+
+Source content is processed for analysis and service operation and is not used for
+model training, advertising or data sale. Read [source processing](docs/source-processing.md)
+for transient storage, metadata/results retention and GitHub output handling.
 
 Read the [CLI reference](docs/cli.md), [config reference](docs/config.md),
-[Action guide](docs/github-action.md), [CI and fork security](docs/ci-security.md),
-and [known limits and privacy](docs/known-limitations.md).
+[CI and fork security](docs/ci-security.md) and [known limits](docs/known-limitations.md).
 
 ## Develop
+
+For a local checkout, use pnpm 11.9.0, run `pnpm install --frozen-lockfile` and
+`pnpm build`, then `node packages/cli/bin/breaklint.js --help`.
 
 `pnpm verify` builds, typechecks, lints, checks formatting, tests synthetic
 public flows, installs packed artifacts in an empty consumer, and inspects the
 Action bundle, dependencies and generated content. No hosted service credentials
 are needed for these local tests. See [CONTRIBUTING.md](CONTRIBUTING.md),
-[SECURITY.md](SECURITY.md), and [license status](LICENSE.md).
+[SECURITY.md](SECURITY.md), and [license](LICENSE.md).
 
-The CLI package coordinate is `@breaklint/cli`; its executable remains `breaklint`.
-The intended npm family is `@breaklint/public-protocol`, `@breaklint/public-config`,
-`@breaklint/hosted-client`, and `@breaklint/cli`. These are unpublished local
-candidates; npm scope control is verified, while publication requires owner approval. The Action
-workspace package stays private and is distributed through `action/` only.
+## License and project
+
+Copyright © 2026 Breaklint. First-party public code is licensed under
+[Apache-2.0](LICENSE.md); see [NOTICE](NOTICE). Third-party dependencies and Unicode
+data retain their own [notices](THIRD_PARTY_NOTICES.md) and [provenance](PROVENANCE.md).
+This license covers the public clients and Action, not the hosted private engine.
+
+The approved repository is [breaklint/breaklint](https://github.com/breaklint/breaklint).
+Use [issues](https://github.com/breaklint/breaklint/issues) for ordinary bugs and
+[private vulnerability reporting](SECURITY.md) for security concerns.

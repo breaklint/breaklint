@@ -54,9 +54,21 @@ function visit(dir, scope) {
     prior.scopes.add(scope);
     return;
   }
-  const notices = readdirSync(dir).filter((n) =>
-    /^(?:licen[sc]e|copying|notice)(?:[.-]|$)/i.test(n),
-  );
+  // Bundled subcomponents can have their own license or attribution notices.
+  // Do not traverse dependency links: each resolved package is visited separately.
+  function noticeFiles(base, prefix = "") {
+    return readdirSync(base, { withFileTypes: true }).flatMap((entry) => {
+      if (entry.isSymbolicLink() || entry.name === "node_modules") return [];
+      const relative = prefix + entry.name;
+      if (entry.isDirectory())
+        return noticeFiles(join(base, entry.name), relative + "/");
+      return entry.isFile() &&
+        /^(?:licen[sc]e|copying|notice)(?:[.-]|$)/i.test(entry.name)
+        ? [relative]
+        : [];
+    });
+  }
+  const notices = noticeFiles(dir).sort();
   const item = {
     name: m.name,
     version: m.version,
@@ -126,8 +138,7 @@ const out = {
   direct,
   packages: publicItems,
   unknownOrMissingNotices: unknown.map((i) => i.name + "@" + i.version),
-  projectLicenseDecision:
-    "Pending owner approval; all first-party package metadata remains UNLICENSED",
+  projectLicenseDecision: "Apache-2.0; Copyright © 2026 Breaklint",
   unicodeData: json(join(root, "unicode/13.0.0/provenance.json")),
 };
 writeFileSync(
@@ -138,7 +149,7 @@ writeFileSync(
   }),
 );
 let text =
-  "# Third-party dependency inventory and notices\n\nGenerated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing remains an owner review gate. Unicode data provenance is documented in PROVENANCE.md.\n\n| Package | Version | License | Action bundle | Scope |\n| --- | --- | --- | --- | --- |\n";
+  "# Third-party dependency inventory and notices\n\nGenerated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. First-party Breaklint code is licensed under Apache-2.0; see LICENSE.md and NOTICE. Unicode data provenance is documented in PROVENANCE.md.\n\n| Package | Version | License | Action bundle | Scope |\n| --- | --- | --- | --- | --- |\n";
 for (const i of items)
   text += `| ${i.name} | ${i.version} | ${i.license} | ${i.bundledInAction ? "yes" : "no"} | ${[...i.scopes].join(", ")} |\n`;
 for (const i of items) {
@@ -151,6 +162,8 @@ text +=
   readFileSync(join(root, "Unicode-License.txt"), "utf8");
 writeFileSync(join(root, "THIRD_PARTY_NOTICES.md"), text);
 for (const name of names) {
+  for (const file of ["LICENSE.md", "NOTICE"])
+    writeFileSync(join(root, "packages", name, file), readFileSync(join(root, file)));
   const dest = join(root, "packages", name, "THIRD_PARTY_NOTICES.md");
   // A full notice set is intentionally retained; no attribution pruning by size.
   writeFileSync(dest, text);
@@ -166,6 +179,8 @@ for (const name of names) {
       readFileSync(join(root, "Unicode-License.txt")),
     );
 }
+for (const file of ["LICENSE.md", "NOTICE"])
+  writeFileSync(join(root, "action", file), readFileSync(join(root, file)));
 writeFileSync(join(root, "action/THIRD_PARTY_NOTICES.md"), text);
 if (existsSync(join(root, "Unicode-License.txt")))
   writeFileSync(

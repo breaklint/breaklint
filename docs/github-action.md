@@ -1,14 +1,16 @@
 # GitHub Action
 
-The local distribution is `action/action.yml` with the self-contained
+The repository distribution is `action/action.yml` with the self-contained
 `action/dist/index.js` bundle. It runs on the GitHub Node 24 runtime. The Action
 handles `pull_request` events on github.com only; other events fail unavailable.
 There is no browser installation, preview URL, or application build step.
 
 The [workflow template](../examples/github-action.yml.example) uses deliberately
-nonworking publication placeholders. Replace the checkout pin and public repository
-coordinate plus full immutable Action commit only after verification. The `/action`
-subdirectory is part of the future coordinate. No existing published Action is claimed.
+nonworking publication placeholders. Replace the checkout pin and full immutable Action commit only after verification.
+The approved Action coordinate is `breaklint/breaklint/action@FULL_COMMIT_SHA`.
+The trusted reusable workflow coordinate is operator-specific and must be registered.
+These templates apply after publication and service enrollment; they do not claim
+that either is already available. Moving version tags are not equivalent to immutable pins.
 
 | Input             | Purpose                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------- |
@@ -32,8 +34,8 @@ Replay uses a durable Check journal; ambiguous creation is not blindly repeated.
 
 An operational provider-authorized service/authenticator is a launch prerequisite.
 The registered CLI service alone is insufficient for Action authorization.
-See [CI security](ci-security.md). The public distribution is not launch-ready
-until this prerequisite and owner publication gates are satisfied.
+See [CI security](ci-security.md) for the minimum required permissions and
+[source processing](source-processing.md) for handling of transferred data.
 
 Same-repository launch authentication uses a short-lived GitHub OIDC token. There
 is no static Breaklint token fallback. The service must register the repository

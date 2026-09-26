@@ -53,7 +53,7 @@ try {
     const paths = run("tar", ["-tzf", tar]).trim().split("\n");
     assert(
       paths.every((p) =>
-        /^package\/(?:package.json|README.md|THIRD_PARTY_NOTICES.md|Unicode-License.txt|dist\/[a-z-]+\.(?:js|d.ts)|bin\/breaklint.js)$/.test(
+        /^package\/(?:package.json|README.md|LICENSE.md|NOTICE|THIRD_PARTY_NOTICES.md|Unicode-License.txt|dist\/[a-z-]+\.(?:js|d.ts)|bin\/breaklint.js)$/.test(
           p,
         ),
       ),
@@ -64,6 +64,21 @@ try {
     run("tar", ["-xzf", tar, "--strip-components=1", "-C", dest]);
     const manifest = JSON.parse(readFileSync(join(dest, "package.json"), "utf8"));
     assert.equal(manifest.name, `@breaklint/${name}`);
+    assert.equal(manifest.version, "0.1.0");
+    assert.equal(manifest.license, "Apache-2.0");
+    assert.equal(manifest.private === true, name === "github-action");
+    assert.equal(
+      manifest.repository.url,
+      "git+https://github.com/breaklint/breaklint.git",
+    );
+    assert.equal(manifest.repository.directory, `packages/${name}`);
+    for (const [dependency, version] of Object.entries(manifest.dependencies ?? {}))
+      if (dependency.startsWith("@breaklint/")) assert.equal(version, "0.1.0");
+    for (const file of ["LICENSE.md", "NOTICE", "THIRD_PARTY_NOTICES.md"])
+      assert.equal(
+        readFileSync(join(dest, file), "utf8"),
+        readFileSync(join(root, file), "utf8"),
+      );
     if (name === "cli") assert.equal(manifest.bin.breaklint, "./bin/breaklint.js");
     assert.equal(
       readFileSync(join(dest, "Unicode-License.txt"), "utf8"),
@@ -127,7 +142,13 @@ try {
     JSON.parse(readFileSync(join(root, "packages/cli/package.json"), "utf8")).version,
   );
   assert.match(
-    run("npx", ["--offline", "--no-install", "breaklint", "--help"]),
+    run("npx", [
+      "--offline",
+      "--no-install",
+      "--package=@breaklint/cli",
+      "breaklint",
+      "--help",
+    ]),
     /--repository/,
   );
   writeFileSync(
@@ -207,6 +228,7 @@ try {
     [
       "--offline",
       "--no-install",
+      "--package=@breaklint/cli",
       "breaklint",
       "--base",
       base,

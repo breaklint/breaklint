@@ -1,7 +1,6 @@
 {
   "name": "@breaklint/cli",
-  "version": "0.1.0-rc.0",
-  "private": true,
+  "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +20,7 @@
     "commander": "15.0.0"
   },
   "description": "Review committed source revisions with the hosted Breaklint service.",
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "bin": {
     "breaklint": "./bin/breaklint.js"
   },
@@ -31,12 +30,23 @@
     "README.md",
     "bin/breaklint.js",
     "THIRD_PARTY_NOTICES.md",
-    "Unicode-License.txt"
+    "Unicode-License.txt",
+    "LICENSE.md",
+    "NOTICE"
   ],
   "engines": {
     "node": "22.14.0 || 24.21.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breaklint/breaklint.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/breaklint/breaklint#readme",
+  "bugs": {
+    "url": "https://github.com/breaklint/breaklint/issues"
   }
 }

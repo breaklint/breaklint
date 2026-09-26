@@ -13,7 +13,7 @@ credential supplied through `BREAKLINT_TOKEN`. No environment dump is sent.
 | `--config <path>`       | Explicit trusted JSON policy; no automatic discovery or JS/TS execution.                   |
 | `--request-id <id>`     | Replay the same frozen submission; cannot reuse an ID for different revisions/policy.      |
 | `--json`                | Emit the validated public result, including findings and approved locations.               |
-| `--help`, `--version`   | Print help or candidate version.                                                           |
+| `--help`, `--version`   | Print help or package version.                                                             |
 
 The CLI resolves immutable commits and reads Git objects, not the working tree.
 It prints source counts and frozen request/revision IDs before submission. This
@@ -33,22 +33,24 @@ indeterminate, never a silently substituted raw-Head pass.
 Lost cancellation responses can leave remote state unconfirmed. Do not treat empty
 findings, an unavailable service, or a cancelled run as a clean comparison.
 
-Local package invocation after `pnpm build`:
+## Package and executable
+
+After publication of 0.1.0:
 
 ```sh
-pnpm --filter @breaklint/cli pack --out ../../.release/breaklint-cli.tgz
-npx --offline --no-install breaklint --help
+npm install --global @breaklint/cli@0.1.0
+breaklint --help
+npx --package=@breaklint/cli@0.1.0 breaklint --version
 ```
 
-The npx command is verified inside the empty consumer created by
-`pnpm test:consumer`, where the actual local tarballs have been installed. That test
-also runs `npx --offline --no-install breaklint --base BASE_COMMIT --repository
-REGISTERED_REPOSITORY_ID --service https://SERVICE_NOT_PROVISIONED.invalid --json`
-with synthetic commits, a mock transport and substituted fixture values. The
-temporary consumer is removed after the test. For your own local consumer, install
-all four client tarballs and override the three `@breaklint/*` dependencies to those
-same files, as shown in `scripts/verify-consumer.mjs`; they are not in a registry.
-The package is `@breaklint/cli` and the executable is `breaklint`. Do not install
-the unrelated unscoped npm package. Registry installation instructions remain
-pending publication; use the locally installed executable.
-Use the repository-local Node command in README for authenticated analysis.
+These registry examples describe post-publication usage and do not assert current
+availability. The package is `@breaklint/cli`; its executable is `breaklint`.
+Service enrollment and authorization are required for analysis; installation alone
+does not grant service access. See [source processing](source-processing.md).
+
+For local development, run `pnpm build` then
+`node packages/cli/bin/breaklint.js --help` from the repository root.
+`pnpm test:consumer` packs all four intended npm packages, installs them in an empty
+consumer with local dependency overrides, and exercises imports, declarations and
+`npx --offline --no-install --package=@breaklint/cli breaklint` using synthetic
+revisions and transport. It does not contact the hosted analysis service.

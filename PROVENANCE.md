@@ -1,8 +1,8 @@
 # Source provenance
 
-This candidate imports existing Breaklint public client source into an independent
-repository. Import history does not assert original authorship. Owner confirmation
-of Breaklint copyright attribution and repository-wide licensing remains required.
+This repository contains Breaklint public client source with independent history.
+Copyright © 2026 Breaklint. First-party code is licensed under Apache-2.0; see
+LICENSE.md and NOTICE. Import history does not assert original authorship.
 
 ## Reproducible Unicode 13.0.0 data
 
@@ -50,4 +50,4 @@ The historical Python generator is still unknown. This is a newly reproducible,
 semantically equivalent replacement, not a claim to recover that generator.
 `Unicode-License.txt` accompanies every npm package and the Action distribution;
 `THIRD_PARTY_NOTICES.md` also includes the applicable notice in full. This third-party
-permission is separate from the pending first-party license decision.
+permission is separate from the first-party Apache-2.0 license.

@@ -1,7 +1,6 @@
 {
   "name": "@breaklint/hosted-client",
-  "version": "0.1.0-rc.0",
-  "private": true,
+  "version": "0.1.0",
   "type": "module",
   "exports": {
     ".": {
@@ -14,7 +13,9 @@
     "dist/*.d.ts",
     "README.md",
     "THIRD_PARTY_NOTICES.md",
-    "Unicode-License.txt"
+    "Unicode-License.txt",
+    "LICENSE.md",
+    "NOTICE"
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json"
@@ -31,8 +32,17 @@
   "engines": {
     "node": "22.14.0 || 24.21.0"
   },
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breaklint/breaklint.git",
+    "directory": "packages/hosted-client"
+  },
+  "homepage": "https://github.com/breaklint/breaklint#readme",
+  "bugs": {
+    "url": "https://github.com/breaklint/breaklint/issues"
   }
 }

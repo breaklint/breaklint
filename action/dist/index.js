@@ -1,4 +1,5 @@
 // Breaklint GitHub Action — generated bundle, do not edit.
+// Copyright © 2026 Breaklint. Apache-2.0; see LICENSE.md and NOTICE.
 // Built from packages/github-action. Regenerate with `pnpm action:bundle`.
 import { createRequire as breaklintCreateRequire } from "node:module";
 import { dirname as breaklintDirname } from "node:path";

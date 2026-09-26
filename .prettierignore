@@ -7,3 +7,6 @@ pnpm-lock.yaml
 THIRD_PARTY_NOTICES.md
 **/THIRD_PARTY_NOTICES.md
 **/Unicode-License.txt
+
+# Preserve the canonical license bytes.
+**/LICENSE.md

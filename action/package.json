@@ -1,4 +1,15 @@
 {
   "type": "module",
-  "private": true
+  "private": true,
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breaklint/breaklint.git",
+    "directory": "action"
+  },
+  "homepage": "https://github.com/breaklint/breaklint#readme",
+  "bugs": {
+    "url": "https://github.com/breaklint/breaklint/issues"
+  }
 }

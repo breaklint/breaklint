@@ -13,6 +13,7 @@ const outFile = path.join(outDir, "index.js");
 const EXTERNAL = [];
 
 const banner = `// Breaklint GitHub Action — generated bundle, do not edit.
+// Copyright © 2026 Breaklint. Apache-2.0; see LICENSE.md and NOTICE.
 // Built from packages/github-action. Regenerate with \`pnpm action:bundle\`.
 import { createRequire as breaklintCreateRequire } from "node:module";
 import { dirname as breaklintDirname } from "node:path";
@@ -72,7 +73,23 @@ const { copyFile } = await import("node:fs/promises");
 await copyFile(outFile, path.join(distribution, "dist/index.js"));
 await writeFile(
   path.join(distribution, "package.json"),
-  JSON.stringify({ type: "module", private: true }, null, 2) + "\n",
+  JSON.stringify(
+    {
+      type: "module",
+      private: true,
+      version: "0.1.0",
+      license: "Apache-2.0",
+      repository: {
+        type: "git",
+        url: "git+https://github.com/breaklint/breaklint.git",
+        directory: "action",
+      },
+      homepage: "https://github.com/breaklint/breaklint#readme",
+      bugs: { url: "https://github.com/breaklint/breaklint/issues" },
+    },
+    null,
+    2,
+  ) + "\n",
 );
 await copyFile(
   path.join(packageRoot, "action.yml"),

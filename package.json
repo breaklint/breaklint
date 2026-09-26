@@ -1,6 +1,6 @@
 {
   "name": "breaklint-public-workspace",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@11.9.0",
@@ -30,5 +30,14 @@
     "typescript-eslint": "8.66.0",
     "prettier": "3.9.6",
     "esbuild": "0.27.2"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breaklint/breaklint.git"
+  },
+  "homepage": "https://github.com/breaklint/breaklint#readme",
+  "bugs": {
+    "url": "https://github.com/breaklint/breaklint/issues"
   }
 }

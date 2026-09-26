@@ -6,11 +6,10 @@ It is not an offline engine. Git trees and commit objects may reveal paths, auth
 commit messages and excluded-file names even when file contents are excluded.
 Source locations and excerpts in results must be treated as repository-sensitive.
 
-The owner must publish raw-source retention/deletion and backup timelines, regions,
-data use, subprocessors and enrollment terms before launch. This candidate makes
-no promises about those unresolved policies. Protocol retry/result binding lasts
-24 hours; that is not a raw-source retention commitment. Do not transfer confidential
-source until authorized under the actual service's terms.
+See [source processing](source-processing.md) for the approved processing purposes,
+transient source handling, metadata/results retention and GitHub publication.
+The 24-hour durable replay window is not an exact deletion guarantee.
+Transfer source only when authorized to use the configured service.
 
 The current selection profile considers committed TS/TSX, JS/JSX/MJS/CJS,
 CSS/SCSS/Sass, JSON and YAML files. Selection is not a claim that every framework,

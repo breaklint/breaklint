@@ -1,6 +1,6 @@
 {
   "name": "@breaklint/github-action",
-  "version": "0.1.0-rc.0",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "main": "./dist/index.js",
@@ -26,11 +26,22 @@
     "dist/*.d.ts",
     "README.md",
     "THIRD_PARTY_NOTICES.md",
-    "Unicode-License.txt"
+    "Unicode-License.txt",
+    "LICENSE.md",
+    "NOTICE"
   ],
   "description": "Publish hosted Breaklint source review results on GitHub pull requests.",
   "engines": {
     "node": "22.14.0 || 24.21.0"
   },
-  "license": "UNLICENSED"
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breaklint/breaklint.git",
+    "directory": "packages/github-action"
+  },
+  "homepage": "https://github.com/breaklint/breaklint#readme",
+  "bugs": {
+    "url": "https://github.com/breaklint/breaklint/issues"
+  }
 }
