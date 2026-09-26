@@ -1,14 +1,15 @@
 # Third-party dependency inventory and notices
 
-Generated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing and Unicode generation provenance remain owner review gates.
+Generated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing remains an owner review gate. Unicode data provenance is documented in PROVENANCE.md.
 
 | Package | Version | License | Action bundle | Scope |
 | --- | --- | --- | --- | --- |
-| @actions/core | 1.11.1 | MIT | yes | runtime |
-| @actions/exec | 1.1.1 | MIT | yes | runtime |
-| @actions/github | 6.0.1 | MIT | yes | runtime |
-| @actions/http-client | 2.2.3 | MIT | yes | runtime |
-| @actions/io | 1.1.3 | MIT | yes | runtime |
+| @actions/core | 3.0.1 | MIT | yes | runtime |
+| @actions/exec | 3.0.0 | MIT | yes | runtime |
+| @actions/github | 9.1.1 | MIT | yes | runtime |
+| @actions/http-client | 3.0.2 | MIT | yes | runtime |
+| @actions/http-client | 4.0.1 | MIT | yes | runtime |
+| @actions/io | 3.0.2 | MIT | yes | runtime |
 | @esbuild/darwin-arm64 | 0.27.2 | MIT | no | development |
 | @eslint-community/eslint-utils | 4.10.1 | MIT | no | development |
 | @eslint-community/regexpp | 4.12.2 | MIT | no | development |
@@ -18,24 +19,23 @@ Generated from the installed lockfile graph and Action bundler inputs. No legal 
 | @eslint/js | 10.0.1 | MIT | no | development |
 | @eslint/object-schema | 3.0.5 | Apache-2.0 | no | development |
 | @eslint/plugin-kit | 0.7.3 | Apache-2.0 | no | development |
-| @fastify/busboy | 2.1.1 | MIT | yes | runtime |
 | @humanfs/core | 0.19.2 | Apache-2.0 | no | development |
 | @humanfs/node | 0.16.8 | Apache-2.0 | no | development |
 | @humanfs/types | 0.15.0 | Apache-2.0 | no | development |
 | @humanwhocodes/module-importer | 1.0.1 | Apache-2.0 | no | development |
 | @humanwhocodes/retry | 0.4.3 | Apache-2.0 | no | development |
-| @octokit/auth-token | 4.0.0 | MIT | yes | runtime |
-| @octokit/core | 5.2.2 | MIT | yes | runtime |
-| @octokit/endpoint | 9.0.6 | MIT | yes | runtime |
-| @octokit/graphql | 7.1.1 | MIT | yes | runtime |
-| @octokit/openapi-types | 20.0.0 | MIT | no | runtime |
-| @octokit/openapi-types | 24.2.0 | MIT | no | runtime |
-| @octokit/plugin-paginate-rest | 9.2.2 | MIT | yes | runtime |
-| @octokit/plugin-rest-endpoint-methods | 10.4.1 | MIT | yes | runtime |
-| @octokit/request | 8.4.1 | MIT | yes | runtime |
-| @octokit/request-error | 5.1.1 | MIT | yes | runtime |
-| @octokit/types | 12.6.0 | MIT | no | runtime |
-| @octokit/types | 13.10.0 | MIT | no | runtime |
+| @octokit/auth-token | 6.0.0 | MIT | yes | runtime |
+| @octokit/core | 7.0.8 | MIT | yes | runtime |
+| @octokit/endpoint | 11.0.5 | MIT | yes | runtime |
+| @octokit/graphql | 9.0.5 | MIT | yes | runtime |
+| @octokit/openapi-types | 27.0.0 | MIT | no | runtime |
+| @octokit/openapi-types | 29.0.1 | MIT | no | runtime |
+| @octokit/plugin-paginate-rest | 14.0.0 | MIT | yes | runtime |
+| @octokit/plugin-rest-endpoint-methods | 17.0.0 | MIT | yes | runtime |
+| @octokit/request | 10.0.16 | MIT | yes | runtime |
+| @octokit/request-error | 7.1.2 | MIT | yes | runtime |
+| @octokit/types | 16.0.0 | MIT | no | runtime |
+| @octokit/types | 18.0.0 | MIT | no | runtime |
 | @types/esrecurse | 4.3.1 | MIT | no | development |
 | @types/estree | 1.0.9 | MIT | no | development |
 | @types/json-schema | 7.0.15 | MIT | no | development |
@@ -54,13 +54,13 @@ Generated from the installed lockfile graph and Action bundler inputs. No legal 
 | acorn-jsx | 5.3.2 | MIT | no | development |
 | ajv | 6.15.0 | MIT | no | development |
 | balanced-match | 4.0.4 | MIT | no | development |
-| before-after-hook | 2.2.3 | Apache-2.0 | yes | runtime |
+| before-after-hook | 4.0.0 | Apache-2.0 | yes | runtime |
 | brace-expansion | 5.0.12 | MIT | no | development |
 | commander | 15.0.0 | MIT | no | runtime |
+| content-type | 3.1.1 | MIT | yes | runtime |
 | cross-spawn | 7.0.6 | MIT | no | development |
 | debug | 4.4.3 | MIT | no | development |
 | deep-is | 0.1.4 | MIT | no | development |
-| deprecation | 2.3.1 | ISC | yes | runtime |
 | esbuild | 0.27.2 | MIT | no | development |
 | escape-string-regexp | 4.0.0 | MIT | no | development |
 | eslint | 10.8.0 | MIT | no | development |
@@ -90,13 +90,13 @@ Generated from the installed lockfile graph and Action bundler inputs. No legal 
 | json-buffer | 3.0.1 | MIT | no | development |
 | json-schema-traverse | 0.4.1 | MIT | no | development |
 | json-stable-stringify-without-jsonify | 1.0.1 | MIT | no | development |
+| json-with-bigint | 3.5.12 | MIT | yes | runtime |
 | keyv | 4.5.4 | MIT | no | development |
 | levn | 0.4.1 | MIT | no | development |
 | locate-path | 6.0.0 | MIT | no | development |
 | minimatch | 10.2.6 | BlueOak-1.0.0 | no | development |
 | ms | 2.1.3 | MIT | no | development |
 | natural-compare | 1.4.0 | MIT | no | development |
-| once | 1.4.0 | ISC | yes | runtime |
 | optionator | 0.9.4 | MIT | no | development |
 | p-limit | 3.1.0 | MIT | no | development |
 | p-locate | 5.0.0 | MIT | no | development |
@@ -115,17 +115,16 @@ Generated from the installed lockfile graph and Action bundler inputs. No legal 
 | type-check | 0.4.0 | MIT | no | development |
 | typescript | 5.9.3 | Apache-2.0 | no | development |
 | typescript-eslint | 8.66.0 | MIT | no | development |
-| undici | 5.29.0 | MIT | yes | runtime |
+| undici | 6.29.0 | MIT | yes | runtime |
 | undici-types | 6.21.0 | MIT | no | development |
-| universal-user-agent | 6.0.1 | ISC | yes | runtime |
+| universal-user-agent | 7.0.3 | ISC | yes | runtime |
 | uri-js | 4.4.1 | BSD-2-Clause | no | development |
 | which | 2.0.2 | ISC | no | development |
 | word-wrap | 1.2.5 | MIT | no | development |
-| wrappy | 1.0.2 | ISC | yes | runtime |
 | yocto-queue | 0.1.0 | MIT | no | development |
 | zod | 4.4.3 | MIT | yes | runtime |
 
-## @actions/core@1.11.1
+## @actions/core@3.0.1
 
 ### LICENSE.md
 
@@ -141,7 +140,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## @actions/exec@1.1.1
+## @actions/exec@3.0.0
 
 ### LICENSE.md
 
@@ -157,7 +156,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## @actions/github@6.0.1
+## @actions/github@9.1.1
 
 ### LICENSE.md
 
@@ -173,7 +172,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-## @actions/http-client@2.2.3
+## @actions/http-client@3.0.2
 
 ### LICENSE
 
@@ -202,7 +201,36 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
-## @actions/io@1.1.3
+## @actions/http-client@4.0.1
+
+### LICENSE
+
+```text
+Actions Http Client for Node.js
+
+Copyright (c) GitHub, Inc.
+
+All rights reserved.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+associated documentation files (the "Software"), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED *AS IS*, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
+
+## @actions/io@3.0.2
 
 ### LICENSE.md
 
@@ -1351,32 +1379,6 @@ THE SOFTWARE.
 
 ```
 
-## @fastify/busboy@2.1.1
-
-### LICENSE
-
-```text
-Copyright Brian White. All rights reserved.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.
-```
-
 ## @humanfs/core@0.19.2
 
 ### LICENSE
@@ -2216,7 +2218,7 @@ IN THE SOFTWARE.
 
 ```
 
-## @octokit/auth-token@4.0.0
+## @octokit/auth-token@6.0.0
 
 ### LICENSE
 
@@ -2245,7 +2247,7 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/core@5.2.2
+## @octokit/core@7.0.8
 
 ### LICENSE
 
@@ -2274,7 +2276,7 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/endpoint@9.0.6
+## @octokit/endpoint@11.0.5
 
 ### LICENSE
 
@@ -2303,7 +2305,7 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/graphql@7.1.1
+## @octokit/graphql@9.0.5
 
 ### LICENSE
 
@@ -2332,35 +2334,37 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/openapi-types@20.0.0
+## @octokit/openapi-types@27.0.0
 
 ### LICENSE
 
 ```text
-Copyright 2020 Gregor Martynus
+Copyright (c) GitHub 2025 - Licensed as MIT.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 ```
 
-## @octokit/openapi-types@24.2.0
+## @octokit/openapi-types@29.0.1
 
 ### LICENSE
 
 ```text
-Copyright 2020 Gregor Martynus
+Copyright (c) GitHub 2025 - Licensed as MIT.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 ```
 
-## @octokit/plugin-paginate-rest@9.2.2
+## @octokit/plugin-paginate-rest@14.0.0
 
 ### LICENSE
 
@@ -2375,7 +2379,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ```
 
-## @octokit/plugin-rest-endpoint-methods@10.4.1
+## @octokit/plugin-rest-endpoint-methods@17.0.0
 
 ### LICENSE
 
@@ -2390,7 +2394,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ```
 
-## @octokit/request@8.4.1
+## @octokit/request@10.0.16
 
 ### LICENSE
 
@@ -2419,7 +2423,7 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/request-error@5.1.1
+## @octokit/request-error@7.1.2
 
 ### LICENSE
 
@@ -2448,7 +2452,7 @@ THE SOFTWARE.
 
 ```
 
-## @octokit/types@12.6.0
+## @octokit/types@16.0.0
 
 ### LICENSE
 
@@ -2463,7 +2467,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ```
 
-## @octokit/types@13.10.0
+## @octokit/types@18.0.0
 
 ### LICENSE
 
@@ -3001,7 +3005,7 @@ SOFTWARE.
 
 ```
 
-## before-after-hook@2.2.3
+## before-after-hook@4.0.0
 
 ### LICENSE
 
@@ -3271,6 +3275,36 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
+## content-type@3.1.1
+
+### LICENSE
+
+```text
+(The MIT License)
+
+Copyright (c) 2015 Douglas Christopher Wilson
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+```
+
 ## cross-spawn@7.0.6
 
 ### LICENSE
@@ -3355,29 +3389,6 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-```
-
-## deprecation@2.3.1
-
-### LICENSE
-
-```text
-The ISC License
-
-Copyright (c) Gregor Martynus and contributors
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
-IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ```
 
@@ -4478,6 +4489,35 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ```
 
+## json-with-bigint@3.5.12
+
+### LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2023 Ivan Korolenko
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+```
+
 ## keyv@4.5.4
 
 
@@ -4622,29 +4662,6 @@ SOFTWARE.
 
 ## natural-compare@1.4.0
 
-
-## once@1.4.0
-
-### LICENSE
-
-```text
-The ISC License
-
-Copyright (c) Isaac Z. Schlueter and Contributors
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
-IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-```
 
 ## optionator@0.9.4
 
@@ -5111,7 +5128,7 @@ SOFTWARE.
 
 ```
 
-## undici@5.29.0
+## undici@6.29.0
 
 ### LICENSE
 
@@ -5169,14 +5186,14 @@ SOFTWARE.
 
 ```
 
-## universal-user-agent@6.0.1
+## universal-user-agent@7.0.3
 
 ### LICENSE.md
 
 ```text
 # [ISC License](https://spdx.org/licenses/ISC)
 
-Copyright (c) 2018, Gregor Martynus (https://github.com/gr2m)
+Copyright (c) 2018-2021, Gregor Martynus (https://github.com/gr2m)
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
@@ -5255,29 +5272,6 @@ THE SOFTWARE.
 
 ```
 
-## wrappy@1.0.2
-
-### LICENSE
-
-```text
-The ISC License
-
-Copyright (c) Isaac Z. Schlueter and Contributors
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR
-IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-
-```
-
 ## yocto-queue@0.1.0
 
 ### license
@@ -5326,4 +5320,45 @@ SOFTWARE.
 
 ## Unicode data
 
-See Unicode-License.txt for the retrieved Unicode permission notice. Confirm historical generation provenance and applicable license before publication.
+See PROVENANCE.md for the pinned Unicode 13.0.0 input and deterministic transformation. The applicable historical notice follows.
+
+Unicode 13.0.0 case-fold data notice
+
+CaseFolding.txt: © 2019 Unicode®, Inc.
+Source: unicode-org/icu release-67-1 (125e29d54990e74845e1546851b5afa3efab06ce).
+The following notice is reproduced from icu4c/LICENSE in that release.
+The data is transformed into a JavaScript lookup table; see PROVENANCE.md.
+
+COPYRIGHT AND PERMISSION NOTICE (ICU 58 and later)
+
+Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Unicode data files and any associated documentation
+(the "Data Files") or Unicode software and any associated documentation
+(the "Software") to deal in the Data Files or Software
+without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, and/or sell copies of
+the Data Files or Software, and to permit persons to whom the Data Files
+or Software are furnished to do so, provided that either
+(a) this copyright and permission notice appear with all copies
+of the Data Files or Software, or
+(b) this copyright and permission notice appear in associated
+Documentation.
+
+THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+
+Except as contained in this notice, the name of a copyright holder
+shall not be used in advertising or otherwise to promote the sale,
+use or other dealings in these Data Files or Software without prior
+written authorization of the copyright holder.

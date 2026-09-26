@@ -1,0 +1,14 @@
+{
+  "unicodeVersion": "13.0.0",
+  "input": "unicode/13.0.0/CaseFolding.txt",
+  "sha256": "99d231d7c91688bbe8ca8ccebcc2f46b5b222f844babe4827295bae11e2abe5f",
+  "officialUcdUrl": "https://www.unicode.org/Public/13.0.0/ucd/CaseFolding.txt",
+  "sourceUrl": "https://raw.githubusercontent.com/unicode-org/icu/125e29d54990e74845e1546851b5afa3efab06ce/icu4c/source/data/unidata/CaseFolding.txt",
+  "licenseSourceUrl": "https://raw.githubusercontent.com/unicode-org/icu/125e29d54990e74845e1546851b5afa3efab06ce/icu4c/LICENSE",
+  "licenseFile": "unicode/13.0.0/ICU-LICENSE.txt",
+  "licenseSha256": "25e21013a7bc2fad735e28c5278a120e4c7f1c327c8c8b9b4df1751748cddbb2",
+  "notice": "Unicode-License.txt",
+  "generationCommand": "node scripts/generate-case-fold.mjs",
+  "transform": "Sorted C/F full default mappings plus implicit identities for target characters; omit S/T; preserve per-code-point ECMAScript lowercase fallback and final NFC normalization",
+  "mappingCount": 1490
+}

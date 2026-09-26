@@ -1,5 +1,5 @@
 {
-  "name": "breaklint",
+  "name": "@breaklint/cli",
   "version": "0.1.0-rc.0",
   "private": true,
   "type": "module",
@@ -21,7 +21,7 @@
     "commander": "15.0.0"
   },
   "description": "Review committed source revisions with the hosted Breaklint service.",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "bin": {
     "breaklint": "./bin/breaklint.js"
   },

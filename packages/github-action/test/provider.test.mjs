@@ -38,38 +38,40 @@ function providerFixture() {
     assert.ok(url.startsWith("https://api.github.com/"));
     assert.ok(init.headers.authorization.includes("publication-only"));
     assert.ok(!JSON.stringify(init).includes("service-credential"));
+    // Real fetch responses expose the final URL; Octokit pagination validates it.
+    const response = (data, options) =>
+      Object.defineProperty(Response.json(data, options), "url", { value: url });
     const body = init.body ? JSON.parse(init.body) : undefined;
     const path = new URL(url).pathname;
     calls.push({ method: init.method, path, body });
     if (path.endsWith("/actions/runs/123"))
-      return Response.json({
+      return response({
         id: 123,
         created_at: "2026-09-19T12:00:00Z",
         event: "pull_request",
         repository: { full_name: "owner/repo" },
       });
-    if (path.endsWith("/pulls/12")) return Response.json(pr);
+    if (path.endsWith("/pulls/12")) return response(pr);
     if (path.endsWith("/check-runs") && init.method === "GET")
-      return Response.json({ total_count: checks.length, check_runs: checks });
+      return response({ total_count: checks.length, check_runs: checks });
     if (path.endsWith("/check-runs") && init.method === "POST") {
       const c = { id: 42, app: { slug: "github-actions" }, ...body };
       checks.push(c);
-      return Response.json(c, { status: 201 });
+      return response(c, { status: 201 });
     }
     if (path.endsWith("/check-runs/42") && init.method === "PATCH") {
       Object.assign(checks[0], body);
-      return Response.json(checks[0]);
+      return response(checks[0]);
     }
     if (path.endsWith("/files"))
-      return Response.json([
+      return response([
         { filename: "card.css", status: "modified", patch: "@@ -1 +1 @@\n-old\n+new" },
       ]);
-    if (path.endsWith("/reviews") && init.method === "GET")
-      return Response.json(reviews);
+    if (path.endsWith("/reviews") && init.method === "GET") return response(reviews);
     if (path.endsWith("/reviews") && init.method === "POST") {
       const r = { id: 1, user: { login: "github-actions[bot]" }, ...body };
       reviews.push(r);
-      return Response.json(r, { status: 201 });
+      return response(r, { status: 201 });
     }
     throw new Error(`Unexpected provider request ${init.method} ${path}`);
   };

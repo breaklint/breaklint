@@ -62,6 +62,13 @@ try {
     const dest = join(consumer, "inspection", name);
     mkdirSync(dest, { recursive: true });
     run("tar", ["-xzf", tar, "--strip-components=1", "-C", dest]);
+    const manifest = JSON.parse(readFileSync(join(dest, "package.json"), "utf8"));
+    assert.equal(manifest.name, `@breaklint/${name}`);
+    if (name === "cli") assert.equal(manifest.bin.breaklint, "./bin/breaklint.js");
+    assert.equal(
+      readFileSync(join(dest, "Unicode-License.txt"), "utf8"),
+      readFileSync(join(root, "Unicode-License.txt"), "utf8"),
+    );
     for (const file of files(dest)) {
       const text = readFileSync(file, "utf8");
       assert.doesNotMatch(
@@ -113,20 +120,24 @@ try {
     installedStore,
     "@types/node@22.20.1",
   ]);
-  const cli = join(consumer, "node_modules/breaklint/bin/breaklint.js");
+  const cli = join(consumer, "node_modules/@breaklint/cli/bin/breaklint.js");
   assert.match(run(process.execPath, [cli, "--help"]), /--base/);
+  assert.equal(
+    run(process.execPath, [cli, "--version"]).trim(),
+    JSON.parse(readFileSync(join(root, "packages/cli/package.json"), "utf8")).version,
+  );
   assert.match(
     run("npx", ["--offline", "--no-install", "breaklint", "--help"]),
     /--repository/,
   );
   writeFileSync(
     join(consumer, "consumer.mjs"),
-    `import assert from 'node:assert/strict';import * as protocol from '@breaklint/public-protocol';import {defineConfig,projectPolicy} from 'breaklint';import * as config from '@breaklint/public-config';import * as client from '@breaklint/hosted-client';assert.deepEqual(Object.keys(protocol),[]);assert.equal(projectPolicy(defineConfig({})).scope.kind,'repository');assert.equal(typeof client.prepareAnalysis,'function');assert.deepEqual(Object.keys(config).sort(),['defineConfig','projectPolicy','validateConfig']);try{await import('@breaklint/public-protocol/dist/schemas.js');assert.fail('deep import accepted')}catch(e){assert.equal(e.code,'ERR_PACKAGE_PATH_NOT_EXPORTED')}`,
+    `import assert from 'node:assert/strict';import * as protocol from '@breaklint/public-protocol';import {defineConfig,projectPolicy} from '@breaklint/cli';import * as config from '@breaklint/public-config';import * as client from '@breaklint/hosted-client';assert.deepEqual(Object.keys(protocol),[]);assert.equal(projectPolicy(defineConfig({})).scope.kind,'repository');assert.equal(typeof client.prepareAnalysis,'function');assert.deepEqual(Object.keys(config).sort(),['defineConfig','projectPolicy','validateConfig']);try{await import('@breaklint/public-protocol/dist/schemas.js');assert.fail('deep import accepted')}catch(e){assert.equal(e.code,'ERR_PACKAGE_PATH_NOT_EXPORTED')}`,
   );
   run(process.execPath, ["consumer.mjs"]);
   writeFileSync(
     join(consumer, "consumer.ts"),
-    `import {defineConfig,projectPolicy,type UserConfig} from 'breaklint';import type {AnalysisRequest,AnalysisResult,PublicFinding,PublicAnalysisPolicy} from '@breaklint/public-protocol';import {createHostedClient,prepareAnalysis} from '@breaklint/hosted-client';const config:UserConfig=defineConfig({});const policy:PublicAnalysisPolicy=projectPolicy(config);void policy;void createHostedClient;void prepareAnalysis;export type Result=[AnalysisRequest,AnalysisResult,PublicFinding];\n// @ts-expect-error no wire helper at public root\nimport type {RevisionSourcePackage} from '@breaklint/public-protocol';\n// @ts-expect-error no private deep-import promise\nimport type {HostedResponse} from '@breaklint/hosted-client/dist/client.js';`,
+    `import {defineConfig,projectPolicy,type UserConfig} from '@breaklint/cli';import type {AnalysisRequest,AnalysisResult,PublicFinding,PublicAnalysisPolicy} from '@breaklint/public-protocol';import {createHostedClient,prepareAnalysis} from '@breaklint/hosted-client';const config:UserConfig=defineConfig({});const policy:PublicAnalysisPolicy=projectPolicy(config);void policy;void createHostedClient;void prepareAnalysis;export type Result=[AnalysisRequest,AnalysisResult,PublicFinding];\n// @ts-expect-error no wire helper at public root\nimport type {RevisionSourcePackage} from '@breaklint/public-protocol';\n// @ts-expect-error no private deep-import promise\nimport type {HostedResponse} from '@breaklint/hosted-client/dist/client.js';`,
   );
   run(process.execPath, [
     join(root, "node_modules/typescript/bin/tsc"),

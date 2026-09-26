@@ -45,4 +45,5 @@ Git SHA-1 object repositories are the supported input format. Uncommitted edits,
 non-Git projects, GitHub Enterprise, general push events, fork credentials, runtime
 verification, AI and repair are outside this public v1 entry point. Node versions
 outside package.json's tested versions are not supported. Linux GitHub-hosted
-runner end-to-end deployment acceptance remains an external launch gate.
+runner verification must match the final release artifact. Prior hosted acceptance
+does not certify a later public release or broaden its declared Node support.

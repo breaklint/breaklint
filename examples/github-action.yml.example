@@ -1,4 +1,4 @@
-# Nonworking prerelease template. Replace every RELEASE_* placeholder before use.
+# Nonworking caller template. Replace every RELEASE_* placeholder before use.
 name: Source review
 on:
   pull_request:
@@ -12,24 +12,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Breaklint unavailable: fork service authorization is not provisioned."
+          echo "Breaklint unavailable: fork authentication is not supported."
           exit 1
   source-review:
     if: github.event.pull_request.head.repo.id == github.event.repository.id
-    runs-on: ubuntu-latest
     permissions:
+      id-token: write
       contents: read
       actions: read
+      pull-requests: read
       checks: write
-    steps:
-      - uses: actions/checkout@RELEASE_VERIFIED_CHECKOUT_COMMIT
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
-          persist-credentials: false
-      - uses: RELEASE_PUBLIC_OWNER/RELEASE_PUBLIC_REPOSITORY/action@RELEASE_FULL_COMMIT
-        with:
-          service-url: https://SERVICE_NOT_PROVISIONED.invalid
-          service-token: ${{ secrets.BREAKLINT_SERVICE_TOKEN }}
-          github-token: ${{ github.token }}
-          inline: "false"
+    uses: RELEASE_TRUSTED_OWNER/RELEASE_TRUSTED_REPOSITORY/.github/workflows/breaklint.yml@RELEASE_FULL_TRUSTED_COMMIT

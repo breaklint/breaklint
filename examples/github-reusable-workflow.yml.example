@@ -1,0 +1,37 @@
+# Install in an operator-reviewed repository, then register its immutable SHA.
+# Never execute Head code/config or accept service/auth settings from the caller.
+name: Trusted Breaklint source review
+on:
+  workflow_call:
+permissions: {}
+jobs:
+  source-review:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      actions: read
+      pull-requests: read
+      checks: write
+    steps:
+      - name: Require supported same-repository PR
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          TARGET_REPOSITORY_ID: ${{ github.event.repository.id }}
+          HEAD_REPOSITORY_ID: ${{ github.event.pull_request.head.repo.id }}
+        run: |
+          if [ "$EVENT_NAME" != "pull_request" ] || [ -z "$HEAD_REPOSITORY_ID" ] || [ "$HEAD_REPOSITORY_ID" != "$TARGET_REPOSITORY_ID" ]; then
+            echo "Breaklint unavailable: supported same-repository context required."
+            exit 1
+          fi
+      - uses: actions/checkout@RELEASE_VERIFIED_CHECKOUT_COMMIT
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: RELEASE_PUBLIC_OWNER/RELEASE_PUBLIC_REPOSITORY/action@RELEASE_FULL_COMMIT
+        with:
+          service-url: https://SERVICE_NOT_PROVISIONED.invalid
+          oidc-audience: RELEASE_OPERATOR_REGISTERED_AUDIENCE
+          github-token: ${{ github.token }}
+          inline: "false"

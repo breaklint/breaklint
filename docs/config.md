@@ -37,7 +37,7 @@ credentials, duplicate JSON keys and invalid paths are rejected without echoing 
 | responsive.unsatisfiable-sizing                   | Authored size constraints cannot all be satisfied.    |
 
 The helpers `defineConfig`, `validateConfig`, `projectPolicy` and type `UserConfig`
-are supported from `@breaklint/public-config`. CLI root `breaklint` re-exports
+are supported from `@breaklint/public-config`. CLI root `@breaklint/cli` re-exports
 `defineConfig`, `projectPolicy`, UserConfig, and the four public protocol types.
 `defineConfig` validates programmatic values; it does not make executable config
 files loadable by the CLI. [The JS example](../examples/define-config.mjs) explicitly

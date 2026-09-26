@@ -127,13 +127,8 @@ const out = {
   packages: publicItems,
   unknownOrMissingNotices: unknown.map((i) => i.name + "@" + i.version),
   projectLicenseDecision:
-    "Pending; inherited CLI MIT metadata is not a repository-wide grant",
-  unicodeData: {
-    source: "https://www.unicode.org/license.txt",
-    notice: "Unicode-License.txt",
-    provenance:
-      "Case-fold table comment identifies Unicode 13.0.0 generated through Python; historical generation inputs and license applicability require owner review",
-  },
+    "Pending owner approval; all first-party package metadata remains UNLICENSED",
+  unicodeData: json(join(root, "unicode/13.0.0/provenance.json")),
 };
 writeFileSync(
   join(root, "DEPENDENCIES.json"),
@@ -143,7 +138,7 @@ writeFileSync(
   }),
 );
 let text =
-  "# Third-party dependency inventory and notices\n\nGenerated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing and Unicode generation provenance remain owner review gates.\n\n| Package | Version | License | Action bundle | Scope |\n| --- | --- | --- | --- | --- |\n";
+  "# Third-party dependency inventory and notices\n\nGenerated from the installed lockfile graph and Action bundler inputs. No legal clearance is asserted. Preserve these notices with bundled distributions. Breaklint licensing remains an owner review gate. Unicode data provenance is documented in PROVENANCE.md.\n\n| Package | Version | License | Action bundle | Scope |\n| --- | --- | --- | --- | --- |\n";
 for (const i of items)
   text += `| ${i.name} | ${i.version} | ${i.license} | ${i.bundledInAction ? "yes" : "no"} | ${[...i.scopes].join(", ")} |\n`;
 for (const i of items) {
@@ -152,7 +147,8 @@ for (const i of items) {
     text += `### ${notice.name}\n\n\`\`\`text\n${readFileSync(join(i.dir, notice.name), "utf8")}\n\`\`\`\n`;
 }
 text +=
-  "\n## Unicode data\n\nSee Unicode-License.txt for the retrieved Unicode permission notice. Confirm historical generation provenance and applicable license before publication.\n";
+  "\n## Unicode data\n\nSee PROVENANCE.md for the pinned Unicode 13.0.0 input and deterministic transformation. The applicable historical notice follows.\n\n" +
+  readFileSync(join(root, "Unicode-License.txt"), "utf8");
 writeFileSync(join(root, "THIRD_PARTY_NOTICES.md"), text);
 for (const name of names) {
   const dest = join(root, "packages", name, "THIRD_PARTY_NOTICES.md");

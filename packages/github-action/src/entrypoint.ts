@@ -3,10 +3,10 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { createGitHubProvider } from "./github-provider.js";
 import { runAction } from "./main.js";
+import { sameRepoCredential, requestGitHubIdToken } from "./oidc.js";
 export async function main(): Promise<void> {
-  const serviceToken = core.getInput("service-token");
+  const audience = core.getInput("oidc-audience");
   const githubToken = core.getInput("github-token");
-  if (serviceToken) core.setSecret(serviceToken);
   if (githubToken) core.setSecret(githubToken);
   const controller = new AbortController();
   const cancel = () => {
@@ -15,11 +15,7 @@ export async function main(): Promise<void> {
   process.once("SIGINT", cancel);
   process.once("SIGTERM", cancel);
   try {
-    if (
-      !githubToken ||
-      process.env["GITHUB_SERVER_URL"] !== "https://github.com" ||
-      serviceToken === githubToken
-    )
+    if (!githubToken || process.env["GITHUB_SERVER_URL"] !== "https://github.com")
       throw new Error("ACCESS_UNAVAILABLE");
     const repository = process.env["GITHUB_REPOSITORY"] ?? "";
     const [owner, repo] = repository.split("/");
@@ -52,13 +48,8 @@ export async function main(): Promise<void> {
       ),
       endpoint: core.getInput("service-url"),
       run: { ...run, job: process.env["GITHUB_JOB"] ?? "" },
-      // A supplied token alone never grants fork access.
       credential: (context) =>
-        Promise.resolve(
-          !context.fork && serviceToken
-            ? { token: serviceToken, forkAuthorized: false }
-            : undefined,
-        ),
+        sameRepoCredential(context, audience, requestGitHubIdToken, core.setSecret),
       signal: controller.signal,
       inline: core.getInput("inline") === "true",
     });

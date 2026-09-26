@@ -23,11 +23,7 @@ test("packed CLI runs in a consumer with zero private engine dependencies", () =
         cwd: join(root, "packages", name),
         stdio: "pipe",
       });
-      const dest = join(
-        directory,
-        "node_modules",
-        name === "cli" ? "breaklint" : "@breaklint/" + name,
-      );
+      const dest = join(directory, "node_modules", "@breaklint/" + name);
       mkdirSync(dest, { recursive: true });
       execFileSync("tar", ["-xzf", tar, "--strip-components=1", "-C", dest]);
     }
@@ -55,7 +51,7 @@ test("packed CLI runs in a consumer with zero private engine dependencies", () =
         dereference: true,
       });
     }
-    const cli = join(directory, "node_modules/breaklint/bin/breaklint.js");
+    const cli = join(directory, "node_modules/@breaklint/cli/bin/breaklint.js");
     const help = execFileSync(process.execPath, [cli, "--help"], {
       cwd: directory,
       encoding: "utf8",
@@ -68,12 +64,13 @@ test("packed CLI runs in a consumer with zero private engine dependencies", () =
       [
         "--input-type=module",
         "-e",
-        "import * as cli from 'breaklint'; console.log(Object.keys(cli).sort().join(','));",
+        "import * as cli from '@breaklint/cli'; console.log(Object.keys(cli).sort().join(','));",
       ],
       { cwd: directory, encoding: "utf8" },
     );
     assert.equal(inspect.trim(), "defineConfig,projectPolicy");
     assert.deepEqual(readdirSync(join(directory, "node_modules/@breaklint")).sort(), [
+      "cli",
       "hosted-client",
       "public-config",
       "public-protocol",

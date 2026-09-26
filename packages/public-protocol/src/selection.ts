@@ -1,6 +1,7 @@
 /** Public transfer safety only; no semantic relevance or analyzer decisions. */
 export const authoredPath = (path: string): boolean =>
-  /\.(?:tsx?|jsx?|mjs|cjs|css|scss|sass|json|yaml|yml)$/.test(path);
+  /\.(?:tsx?|jsx?|mjs|cjs|css|scss|sass|json|yaml|yml)$/.test(path) ||
+  /(?:^|\/)(?:\.gitignore|\.breaklintignore|\.gitattributes)$/.test(path);
 export const sensitivePath = (path: string): boolean =>
   path
     .split("/")

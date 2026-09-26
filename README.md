@@ -1,12 +1,31 @@
 # Breaklint
 
-Review committed source changes for responsive layout problems. Breaklint's CLI
-and GitHub Action send bounded source revisions to an authenticated hosted analysis
-service and show versioned findings with explicit coverage and uncertainty.
+Breaklint is a source-native responsive regression reviewer for pull requests.
+Its public CLI and GitHub Action send a bounded immutable source/revision package
+over authenticated HTTPS to the private hosted Breaklint service. The analyzer
+engine is proprietary and is not included in this repository. Results include
+explicit coverage and uncertainty.
 
 Source is the primary truth. No browser, preview URL, application deployment,
 or application login is needed. Public v1 does not include runtime verification,
 AI explanations, repairs, or an offline analysis engine.
+
+## Public v1 support
+
+| Area                                                                    | Scope                                                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| React / Next.js                                                         | Bounded source review; framework recognition does not establish complete coverage |
+| Authored CSS, CSS Modules, literal inline styles                        | Supported within modeled Width, Flex and Grid semantics                           |
+| Unresolved conditions, source/style influence, component/prop semantics | Abstains where evidence cannot establish behavior                                 |
+| Dynamic content and intrinsic dimensions                                | Abstains where dimensions cannot be proven                                        |
+| Tailwind / framework themes                                             | Limited; complete theme semantics are unsupported                                 |
+| Typography and arbitrary runtime styles                                 | Intrinsic text measurement and browser-equivalent behavior are unsupported        |
+| GitHub delivery                                                         | Check and job summary; public inline review comments are outside v1               |
+
+Empty findings do not mean clean unless analysis is complete. Unsupported or
+indeterminate input remains inconclusive; proven blocking findings may still fail
+a limited review. Runtime visual testing, AI review and automatic repair are
+outside public v1.
 
 **Local prerelease candidate. Nothing here asserts npm or GitHub availability.**
 Public launch is blocked on owner licensing, release coordinates, service access,
@@ -47,3 +66,9 @@ public flows, installs packed artifacts in an empty consumer, and inspects the
 Action bundle, dependencies and generated content. No hosted service credentials
 are needed for these local tests. See [CONTRIBUTING.md](CONTRIBUTING.md),
 [SECURITY.md](SECURITY.md), and [license status](LICENSE.md).
+
+The CLI package coordinate is `@breaklint/cli`; its executable remains `breaklint`.
+The intended npm family is `@breaklint/public-protocol`, `@breaklint/public-config`,
+`@breaklint/hosted-client`, and `@breaklint/cli`. These are unpublished local
+candidates; npm scope authority still requires owner verification. The Action
+workspace package stays private and is distributed through `action/` only.

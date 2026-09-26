@@ -36,7 +36,7 @@ findings, an unavailable service, or a cancelled run as a clean comparison.
 Local package invocation after `pnpm build`:
 
 ```sh
-pnpm --filter breaklint pack --out ../../.release/breaklint.tgz
+pnpm --filter @breaklint/cli pack --out ../../.release/breaklint-cli.tgz
 npx --offline --no-install breaklint --help
 ```
 
@@ -48,6 +48,7 @@ with synthetic commits, a mock transport and substituted fixture values. The
 temporary consumer is removed after the test. For your own local consumer, install
 all four client tarballs and override the three `@breaklint/*` dependencies to those
 same files, as shown in `scripts/verify-consumer.mjs`; they are not in a registry.
-There
-is no `npx breaklint@latest` instruction until ownership and publication are verified.
+The package is `@breaklint/cli` and the executable is `breaklint`. Do not install
+the unrelated unscoped npm package. Registry installation instructions remain
+pending scope authority and publication; use the locally installed executable.
 Use the repository-local Node command in README for authenticated analysis.

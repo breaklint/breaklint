@@ -8,9 +8,9 @@ inputs:
   service-url:
     description: Trusted HTTPS service endpoint, without credentials or query parameters.
     required: true
-  service-token:
-    description: Dedicated service credential from trusted workflow secrets; never a GitHub token.
-    required: false
+  oidc-audience:
+    description: Exact audience registered by the hosted service operator. Requires id-token write permission.
+    required: true
   github-token:
     description: GitHub Actions token for provider context and publication, separate from service authentication.
     required: true
@@ -20,7 +20,7 @@ inputs:
     required: false
     default: .
   inline:
-    description: Publish service-approved raw-Head locations in the current PR diff.
+    description: Reserved compatibility input. Keep false; public v1 publishes Checks and summaries.
     required: false
     default: "false"
 outputs:

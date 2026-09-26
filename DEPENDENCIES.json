@@ -16,30 +16,30 @@
     },
     { "owner": "@breaklint/hosted-client", "name": "ignore", "version": "7.0.6" },
     {
-      "owner": "breaklint",
+      "owner": "@breaklint/cli",
       "name": "@breaklint/public-config",
       "version": "workspace:*"
     },
     {
-      "owner": "breaklint",
+      "owner": "@breaklint/cli",
       "name": "@breaklint/public-protocol",
       "version": "workspace:*"
     },
     {
-      "owner": "breaklint",
+      "owner": "@breaklint/cli",
       "name": "@breaklint/hosted-client",
       "version": "workspace:*"
     },
-    { "owner": "breaklint", "name": "commander", "version": "15.0.0" },
+    { "owner": "@breaklint/cli", "name": "commander", "version": "15.0.0" },
     {
       "owner": "@breaklint/github-action",
       "name": "@actions/core",
-      "version": "1.11.1"
+      "version": "3.0.1"
     },
     {
       "owner": "@breaklint/github-action",
       "name": "@actions/github",
-      "version": "6.0.1"
+      "version": "9.1.1"
     },
     {
       "owner": "@breaklint/github-action",
@@ -60,11 +60,11 @@
   "packages": [
     {
       "name": "@actions/core",
-      "version": "1.11.1",
+      "version": "3.0.1",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@actions/exec": "^1.1.1", "@actions/http-client": "^2.0.1" },
+      "dependencies": { "@actions/exec": "^3.0.0", "@actions/http-client": "^4.0.0" },
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": [
@@ -76,11 +76,11 @@
     },
     {
       "name": "@actions/exec",
-      "version": "1.1.1",
+      "version": "3.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@actions/io": "^1.0.1" },
+      "dependencies": { "@actions/io": "^3.0.2" },
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": [
@@ -92,18 +92,18 @@
     },
     {
       "name": "@actions/github",
-      "version": "6.0.1",
+      "version": "9.1.1",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
-        "@actions/http-client": "^2.2.0",
-        "@octokit/core": "^5.0.1",
-        "@octokit/plugin-paginate-rest": "^9.2.2",
-        "@octokit/plugin-rest-endpoint-methods": "^10.4.0",
-        "@octokit/request": "^8.4.1",
-        "@octokit/request-error": "^5.1.1",
-        "undici": "^5.28.5"
+        "@actions/http-client": "^3.0.2",
+        "@octokit/core": "^7.0.6",
+        "@octokit/plugin-paginate-rest": "^14.0.0",
+        "@octokit/plugin-rest-endpoint-methods": "^17.0.0",
+        "@octokit/request": "^10.0.7",
+        "@octokit/request-error": "^7.1.0",
+        "undici": "^6.23.0"
       },
       "optionalDependencies": {},
       "engines": {},
@@ -116,11 +116,27 @@
     },
     {
       "name": "@actions/http-client",
-      "version": "2.2.3",
+      "version": "3.0.2",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "tunnel": "^0.0.6", "undici": "^5.25.4" },
+      "dependencies": { "tunnel": "^0.0.6", "undici": "^6.23.0" },
+      "optionalDependencies": {},
+      "engines": {},
+      "noticeFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "a338a09e00418402e779e3ff372a2bca3be66259d6192e0a9fe2949969d648f3"
+        }
+      ]
+    },
+    {
+      "name": "@actions/http-client",
+      "version": "4.0.1",
+      "license": "MIT",
+      "scopes": ["runtime"],
+      "bundledInAction": true,
+      "dependencies": { "tunnel": "^0.0.6", "undici": "^6.23.0" },
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": [
@@ -132,7 +148,7 @@
     },
     {
       "name": "@actions/io",
-      "version": "1.1.3",
+      "version": "3.0.2",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
@@ -290,22 +306,6 @@
       ]
     },
     {
-      "name": "@fastify/busboy",
-      "version": "2.1.1",
-      "license": "MIT",
-      "scopes": ["runtime"],
-      "bundledInAction": true,
-      "dependencies": {},
-      "optionalDependencies": {},
-      "engines": { "node": ">=14" },
-      "noticeFiles": [
-        {
-          "name": "LICENSE",
-          "sha256": "d06b5d27bbbbe22c36b1fd88406b1208876e2d37d795f5b8eaed951a459a3111"
-        }
-      ]
-    },
-    {
       "name": "@humanfs/core",
       "version": "0.19.2",
       "license": "Apache-2.0",
@@ -386,13 +386,13 @@
     },
     {
       "name": "@octokit/auth-token",
-      "version": "4.0.0",
+      "version": "6.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {},
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -402,21 +402,21 @@
     },
     {
       "name": "@octokit/core",
-      "version": "5.2.2",
+      "version": "7.0.8",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
-        "@octokit/auth-token": "^4.0.0",
-        "@octokit/graphql": "^7.1.0",
-        "@octokit/request": "^8.4.1",
-        "@octokit/request-error": "^5.1.1",
-        "@octokit/types": "^13.0.0",
-        "before-after-hook": "^2.2.0",
-        "universal-user-agent": "^6.0.0"
+        "@octokit/auth-token": "^6.0.0",
+        "@octokit/graphql": "^9.0.5",
+        "@octokit/request": "^10.0.16",
+        "@octokit/request-error": "^7.1.2",
+        "@octokit/types": "^18.0.0",
+        "before-after-hook": "^4.0.0",
+        "universal-user-agent": "^7.0.0"
       },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -426,13 +426,13 @@
     },
     {
       "name": "@octokit/endpoint",
-      "version": "9.0.6",
+      "version": "11.0.5",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@octokit/types": "^13.1.0", "universal-user-agent": "^6.0.0" },
+      "dependencies": { "@octokit/types": "^18.0.0", "universal-user-agent": "^7.0.2" },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -442,17 +442,17 @@
     },
     {
       "name": "@octokit/graphql",
-      "version": "7.1.1",
+      "version": "9.0.5",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
-        "@octokit/request": "^8.4.1",
-        "@octokit/types": "^13.0.0",
-        "universal-user-agent": "^6.0.0"
+        "@octokit/request": "^10.0.16",
+        "@octokit/types": "^18.0.0",
+        "universal-user-agent": "^7.0.0"
       },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -462,7 +462,7 @@
     },
     {
       "name": "@octokit/openapi-types",
-      "version": "20.0.0",
+      "version": "27.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": false,
@@ -472,13 +472,13 @@
       "noticeFiles": [
         {
           "name": "LICENSE",
-          "sha256": "42a39bbb762677f013c9b959785ff8853f67ce8ed06caa71b7044142518e1731"
+          "sha256": "1a66adbb5a45806b7fe0b5ff3e78008b57e660f30e688286c0f16a6991f10fd1"
         }
       ]
     },
     {
       "name": "@octokit/openapi-types",
-      "version": "24.2.0",
+      "version": "29.0.1",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": false,
@@ -488,19 +488,19 @@
       "noticeFiles": [
         {
           "name": "LICENSE",
-          "sha256": "42a39bbb762677f013c9b959785ff8853f67ce8ed06caa71b7044142518e1731"
+          "sha256": "1a66adbb5a45806b7fe0b5ff3e78008b57e660f30e688286c0f16a6991f10fd1"
         }
       ]
     },
     {
       "name": "@octokit/plugin-paginate-rest",
-      "version": "9.2.2",
+      "version": "14.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@octokit/types": "^12.6.0" },
+      "dependencies": { "@octokit/types": "^16.0.0" },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -510,13 +510,13 @@
     },
     {
       "name": "@octokit/plugin-rest-endpoint-methods",
-      "version": "10.4.1",
+      "version": "17.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@octokit/types": "^12.6.0" },
+      "dependencies": { "@octokit/types": "^16.0.0" },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -526,18 +526,20 @@
     },
     {
       "name": "@octokit/request",
-      "version": "8.4.1",
+      "version": "10.0.16",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
       "dependencies": {
-        "@octokit/endpoint": "^9.0.6",
-        "@octokit/request-error": "^5.1.1",
-        "@octokit/types": "^13.1.0",
-        "universal-user-agent": "^6.0.0"
+        "@octokit/endpoint": "^11.0.5",
+        "@octokit/request-error": "^7.1.2",
+        "@octokit/types": "^18.0.0",
+        "content-type": "^3.0.0",
+        "json-with-bigint": "^3.5.12",
+        "universal-user-agent": "^7.0.2"
       },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -547,17 +549,13 @@
     },
     {
       "name": "@octokit/request-error",
-      "version": "5.1.1",
+      "version": "7.1.2",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": {
-        "@octokit/types": "^13.1.0",
-        "deprecation": "^2.0.0",
-        "once": "^1.4.0"
-      },
+      "dependencies": { "@octokit/types": "^18.0.0" },
       "optionalDependencies": {},
-      "engines": { "node": ">= 18" },
+      "engines": { "node": ">= 20" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -567,11 +565,11 @@
     },
     {
       "name": "@octokit/types",
-      "version": "12.6.0",
+      "version": "16.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": false,
-      "dependencies": { "@octokit/openapi-types": "^20.0.0" },
+      "dependencies": { "@octokit/openapi-types": "^27.0.0" },
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": [
@@ -583,11 +581,11 @@
     },
     {
       "name": "@octokit/types",
-      "version": "13.10.0",
+      "version": "18.0.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": false,
-      "dependencies": { "@octokit/openapi-types": "^24.2.0" },
+      "dependencies": { "@octokit/openapi-types": "^29.0.1" },
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": [
@@ -938,7 +936,7 @@
     },
     {
       "name": "before-after-hook",
-      "version": "2.2.3",
+      "version": "4.0.0",
       "license": "Apache-2.0",
       "scopes": ["runtime"],
       "bundledInAction": true,
@@ -981,6 +979,22 @@
         {
           "name": "LICENSE",
           "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b"
+        }
+      ]
+    },
+    {
+      "name": "content-type",
+      "version": "3.1.1",
+      "license": "MIT",
+      "scopes": ["runtime"],
+      "bundledInAction": true,
+      "dependencies": {},
+      "optionalDependencies": {},
+      "engines": { "node": ">=22" },
+      "noticeFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "257aed98914108e91a337912727b6a802eef218248507f74b76faffaff517a38"
         }
       ]
     },
@@ -1033,22 +1047,6 @@
         {
           "name": "LICENSE",
           "sha256": "f2042f3634c4136d06b5139c9c6aefb81a3a462b514548bc1845953233dfba98"
-        }
-      ]
-    },
-    {
-      "name": "deprecation",
-      "version": "2.3.1",
-      "license": "ISC",
-      "scopes": ["runtime"],
-      "bundledInAction": true,
-      "dependencies": {},
-      "optionalDependencies": {},
-      "engines": {},
-      "noticeFiles": [
-        {
-          "name": "LICENSE",
-          "sha256": "bfa751427053e9f0e4f2af1e62862681cdd45000db8d8db753baf7d462cb1a08"
         }
       ]
     },
@@ -1574,6 +1572,22 @@
       ]
     },
     {
+      "name": "json-with-bigint",
+      "version": "3.5.12",
+      "license": "MIT",
+      "scopes": ["runtime"],
+      "bundledInAction": true,
+      "dependencies": {},
+      "optionalDependencies": {},
+      "engines": {},
+      "noticeFiles": [
+        {
+          "name": "LICENSE",
+          "sha256": "bea8e581121934176676096d9745f71a67bc2f8fe1d5579ba0a977c78902beea"
+        }
+      ]
+    },
+    {
       "name": "keyv",
       "version": "4.5.4",
       "license": "MIT",
@@ -1658,22 +1672,6 @@
       "optionalDependencies": {},
       "engines": {},
       "noticeFiles": []
-    },
-    {
-      "name": "once",
-      "version": "1.4.0",
-      "license": "ISC",
-      "scopes": ["runtime"],
-      "bundledInAction": true,
-      "dependencies": { "wrappy": "1" },
-      "optionalDependencies": {},
-      "engines": {},
-      "noticeFiles": [
-        {
-          "name": "LICENSE",
-          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
-        }
-      ]
     },
     {
       "name": "optionator",
@@ -1977,13 +1975,13 @@
     },
     {
       "name": "undici",
-      "version": "5.29.0",
+      "version": "6.29.0",
       "license": "MIT",
       "scopes": ["runtime"],
       "bundledInAction": true,
-      "dependencies": { "@fastify/busboy": "^2.0.0" },
+      "dependencies": {},
       "optionalDependencies": {},
-      "engines": { "node": ">=14.0" },
+      "engines": { "node": ">=18.17" },
       "noticeFiles": [
         {
           "name": "LICENSE",
@@ -2009,7 +2007,7 @@
     },
     {
       "name": "universal-user-agent",
-      "version": "6.0.1",
+      "version": "7.0.3",
       "license": "ISC",
       "scopes": ["runtime"],
       "bundledInAction": true,
@@ -2019,7 +2017,7 @@
       "noticeFiles": [
         {
           "name": "LICENSE.md",
-          "sha256": "b7ad8777cf2eaca832498a2bd34fca0a5bde02d74158fa6c24ab4596d4f73a25"
+          "sha256": "b9b3eeac9f4ae8ae50773f318ac29f2052bbf08ee33fb6bb024d90d86c7492d2"
         }
       ]
     },
@@ -2072,22 +2070,6 @@
       ]
     },
     {
-      "name": "wrappy",
-      "version": "1.0.2",
-      "license": "ISC",
-      "scopes": ["runtime"],
-      "bundledInAction": true,
-      "dependencies": {},
-      "optionalDependencies": {},
-      "engines": {},
-      "noticeFiles": [
-        {
-          "name": "LICENSE",
-          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b"
-        }
-      ]
-    },
-    {
       "name": "yocto-queue",
       "version": "0.1.0",
       "license": "MIT",
@@ -2128,10 +2110,19 @@
     "keyv@4.5.4",
     "natural-compare@1.4.0"
   ],
-  "projectLicenseDecision": "Pending; inherited CLI MIT metadata is not a repository-wide grant",
+  "projectLicenseDecision": "Pending owner approval; all first-party package metadata remains UNLICENSED",
   "unicodeData": {
-    "source": "https://www.unicode.org/license.txt",
+    "unicodeVersion": "13.0.0",
+    "input": "unicode/13.0.0/CaseFolding.txt",
+    "sha256": "99d231d7c91688bbe8ca8ccebcc2f46b5b222f844babe4827295bae11e2abe5f",
+    "officialUcdUrl": "https://www.unicode.org/Public/13.0.0/ucd/CaseFolding.txt",
+    "sourceUrl": "https://raw.githubusercontent.com/unicode-org/icu/125e29d54990e74845e1546851b5afa3efab06ce/icu4c/source/data/unidata/CaseFolding.txt",
+    "licenseSourceUrl": "https://raw.githubusercontent.com/unicode-org/icu/125e29d54990e74845e1546851b5afa3efab06ce/icu4c/LICENSE",
+    "licenseFile": "unicode/13.0.0/ICU-LICENSE.txt",
+    "licenseSha256": "25e21013a7bc2fad735e28c5278a120e4c7f1c327c8c8b9b4df1751748cddbb2",
     "notice": "Unicode-License.txt",
-    "provenance": "Case-fold table comment identifies Unicode 13.0.0 generated through Python; historical generation inputs and license applicability require owner review"
+    "generationCommand": "node scripts/generate-case-fold.mjs",
+    "transform": "Sorted C/F full default mappings plus implicit identities for target characters; omit S/T; preserve per-code-point ECMAScript lowercase fallback and final NFC normalization",
+    "mappingCount": 1490
   }
 }

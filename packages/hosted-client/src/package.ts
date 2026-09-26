@@ -1,7 +1,7 @@
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { randomBytes } from "node:crypto";
-import ignore from "ignore";
+import { revisionIgnoreMatcher } from "./revision-selection.js";
 import type { AnalysisRequest, PublicAnalysisPolicy } from "@breaklint/public-protocol";
 import {
   parsePolicy,
@@ -150,7 +150,7 @@ export async function prepareAnalysis(input: {
       if (leaves.length > L.leavesPerSnapshot) throw new Error("LIMIT_EXCEEDED");
       for (const id of treeIds) await addObject("tree", id);
       // Immutable per-revision ignore rules. Never read working-tree rules/config.
-      const rules: { directory: string; matcher: ReturnType<typeof ignore> }[] = [];
+      const controls: { path: string; contents: string }[] = [];
       for (const leaf of leaves)
         if (/(^|\/)(?:\.gitignore|\.breaklintignore)$/.test(leaf.path)) {
           if (leaf.mode !== "100644" && leaf.mode !== "100755")
@@ -158,11 +158,9 @@ export async function prepareAnalysis(input: {
           const text = (await git("cat-file", "blob", leaf.id)).toString("utf8");
           if (Buffer.byteLength(text) > L.sourceBlobBytes)
             throw new Error("LIMIT_EXCEEDED");
-          rules.push({
-            directory: leaf.path.slice(0, leaf.path.lastIndexOf("/") + 1),
-            matcher: ignore().add(text),
-          });
+          controls.push({ path: leaf.path, contents: text });
         }
+      const revisionIgnored = revisionIgnoreMatcher(controls);
       const files: File[] = [];
       let includedBytes = 0;
       for (const leaf of leaves) {
@@ -177,14 +175,7 @@ export async function prepareAnalysis(input: {
           )
         )
           reason = "user-excluded";
-        else if (
-          rules.some(
-            (r) =>
-              path.startsWith(r.directory) &&
-              r.matcher.ignores(path.slice(r.directory.length)),
-          )
-        )
-          reason = "revision-ignored";
+        else if (revisionIgnored(path)) reason = "revision-ignored";
         else if (mode === "120000") reason = "symlink";
         else if (mode === "160000") reason = "submodule";
         else if (mode !== "100644" && mode !== "100755") reason = "nonregular";
