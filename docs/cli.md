@@ -50,5 +50,5 @@ all four client tarballs and override the three `@breaklint/*` dependencies to t
 same files, as shown in `scripts/verify-consumer.mjs`; they are not in a registry.
 The package is `@breaklint/cli` and the executable is `breaklint`. Do not install
 the unrelated unscoped npm package. Registry installation instructions remain
-pending scope authority and publication; use the locally installed executable.
+pending publication; use the locally installed executable.
 Use the repository-local Node command in README for authenticated analysis.

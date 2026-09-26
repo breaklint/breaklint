@@ -70,5 +70,5 @@ are needed for these local tests. See [CONTRIBUTING.md](CONTRIBUTING.md),
 The CLI package coordinate is `@breaklint/cli`; its executable remains `breaklint`.
 The intended npm family is `@breaklint/public-protocol`, `@breaklint/public-config`,
 `@breaklint/hosted-client`, and `@breaklint/cli`. These are unpublished local
-candidates; npm scope authority still requires owner verification. The Action
+candidates; npm scope control is verified, while publication requires owner approval. The Action
 workspace package stays private and is distributed through `action/` only.
